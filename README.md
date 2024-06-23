@@ -16,7 +16,7 @@ Takım Unity 7
 
 ## Product Backlog URL
 
-[Flutter Team 52 Miro Backlog Board](https://miro.com/app/board/uXjVO4kRs2w=/)
+
 
 ## Ürün Açıklaması
 
@@ -107,7 +107,6 @@ Takım Unity 7
 
 - **Sprint Retrospective:**
 
-  - Takım üyelerinin gelecek projelerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
 
 
 ---
