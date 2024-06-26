@@ -8,7 +8,8 @@ Takım Unity 7
 - Aziz Önder: Scrum Master / Product Owner / Developer
 - Beyza Özkan: Developer
 - Aybaran Yurtseven: Developer
-- Ayberk Yaşar: Aktif Olmayan Üye
+- Ayberk Yaşar: Developer
+  
 
 ## Ürün İsmi
 
