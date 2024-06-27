@@ -1,6 +1,10 @@
-﻿using UnityEngine;
+﻿using log4net.Util;
+using System.Collections.Generic;
+//using System.Numerics;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -8,12 +12,42 @@ using UnityEngine.InputSystem;
 
 namespace StarterAssets
 {
+    public enum CharacterType
+    {
+        Human,
+        Rat,
+        Chameleon,
+        Monkey,
+        Kangaroo
+    }
+
+    public struct CharacterProperties
+    {
+        public float MoveSpeed;
+        public float SprintSpeed;
+        public float JumpHeight;
+        public Vector3 Scale;
+
+        public CharacterProperties(float moveSpeed, float sprintSpeed, float jumpHeight, float scaleFactor)
+        {
+            MoveSpeed = moveSpeed;
+            SprintSpeed = sprintSpeed;
+            JumpHeight = jumpHeight;
+            Scale = Vector3.one * scaleFactor;
+        }
+    }
+
     [RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM
     [RequireComponent(typeof(PlayerInput))]
 #endif
+
     public class ThirdPersonController : MonoBehaviour
     {
+        private float originalHeight;
+        private Vector3 originalCenter;
+        private float originalRadius;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -74,6 +108,14 @@ namespace StarterAssets
 
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
+
+
+        //public float MoveSpeedRat = 1.0f;
+        //public float SprintSpeedRat = 2.335f;
+        //public float JumpHeightRat = 0.2f;
+
+        //public CharacterType _currentCharacterType = CharacterType.Human;
+
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -150,6 +192,10 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            originalHeight = _controller.height;
+            originalCenter = _controller.center;
+            originalRadius = _controller.radius;
         }
 
         private void Update()
@@ -387,6 +433,35 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        public void SetCharacterProperties(CharacterProperties properties)
+        {
+            MoveSpeed = properties.MoveSpeed;
+            SprintSpeed = properties.SprintSpeed;
+            JumpHeight = properties.JumpHeight;
+
+            AdjustCharacterController(properties.Scale);
+
+            //transform.localScale = properties.Scale;
+            transform.GetChild(0).localScale = properties.Scale;
+            //transform.GetChild(1).localScale = properties.Scale;
+            //transform.GetChild(2).localScale = properties.Scale;
+
+
+            
+        }
+
+        private void AdjustCharacterController(Vector3 scale)
+        {
+            _controller.height = originalHeight * scale.y;
+            _controller.center = originalCenter * scale.y;
+            _controller.radius = originalRadius * scale.x;
+
+
+            //Vector3 position = transform.position;
+            //position.y += originalHeight;
+            //transform.position = position;
         }
     }
 }
