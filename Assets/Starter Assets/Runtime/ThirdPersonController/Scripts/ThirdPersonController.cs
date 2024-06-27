@@ -1,7 +1,9 @@
-﻿using log4net.Util;
+﻿using Codice.Client.Common.GameUI;
+using log4net.Util;
 using System.Collections.Generic;
 //using System.Numerics;
 using UnityEngine;
+using UnityEngine.Animations;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -114,7 +116,7 @@ namespace StarterAssets
         //public float SprintSpeedRat = 2.335f;
         //public float JumpHeightRat = 0.2f;
 
-        //public CharacterType _currentCharacterType = CharacterType.Human;
+        public CharacterType _currentCharacterType = CharacterType.Human;
 
 
         // cinemachine
@@ -151,6 +153,11 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
+
+
+        //CLIMBING
+        private bool isClimbing = false;
+        private Vector3 lastGrabDirection; 
 
         private bool IsCurrentDeviceMouse
         {
@@ -313,6 +320,68 @@ namespace StarterAssets
 
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
+            //For climbing mechanic
+
+            if (_currentCharacterType == CharacterType.Monkey)
+            {
+                if (!isClimbing)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        float avoidFloorDistance = .1f;
+                        float climbableGrabDistance = .4f;
+                        if (Physics.Raycast(transform.position + Vector3.up * avoidFloorDistance, targetDirection, out RaycastHit raycastHit, climbableGrabDistance))
+                        {
+                            if (raycastHit.transform.CompareTag("Climbable"))
+                            {
+                                GrabLadder(targetDirection);
+                                //Debug.Log(raycastHit);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    float avoidFloorDistance = .1f;
+                    float climbableGrabDistance = .4f;
+                    if (Physics.Raycast(transform.position + Vector3.up * avoidFloorDistance, lastGrabDirection, out RaycastHit raycastHit, climbableGrabDistance))
+                    {
+                        if (!raycastHit.transform.CompareTag("Climbable"))
+                        {
+                            DropLadder();
+                            _verticalVelocity = 4f;
+                        }
+                    }
+                    else
+                    {
+                        DropLadder();
+                        _verticalVelocity = 4f;
+                    }
+
+                    if (Vector3.Dot(targetDirection, lastGrabDirection) < 0f)
+                    {
+                        // climbing down the object
+                        float climbableFloorDropDistance = .1f;
+                        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit floorRaycastHit, climbableFloorDropDistance))
+                        {
+                            DropLadder();
+                        }
+                    }
+                }
+
+
+                if (isClimbing)
+                {
+                    targetDirection.x = 0f;
+                    targetDirection.y = targetDirection.z;
+                    targetDirection.z = 0f;
+                    _verticalVelocity = 0f;
+                    Grounded = true;
+                    _speed = targetSpeed;
+                }
+            }
+
+
             // move the player
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
@@ -323,6 +392,17 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
+        }
+
+        private void GrabLadder(Vector3 lastGrabDirection)
+        {
+            isClimbing = true;
+            this.lastGrabDirection = lastGrabDirection;
+        }
+
+        private void DropLadder()
+        {
+            isClimbing = false;
         }
 
         private void JumpAndGravity()
@@ -443,13 +523,8 @@ namespace StarterAssets
 
             AdjustCharacterController(properties.Scale);
 
-            //transform.localScale = properties.Scale;
             transform.GetChild(0).localScale = properties.Scale;
-            //transform.GetChild(1).localScale = properties.Scale;
-            //transform.GetChild(2).localScale = properties.Scale;
-
-
-            
+ 
         }
 
         private void AdjustCharacterController(Vector3 scale)

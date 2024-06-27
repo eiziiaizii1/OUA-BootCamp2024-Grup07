@@ -31,6 +31,7 @@ public class CharacterTransformation : MonoBehaviour
         if (_characterProperties.TryGetValue(newCharacterType, out CharacterProperties properties))
         {
             thirdPersonController.SetCharacterProperties(properties);
+            thirdPersonController._currentCharacterType = newCharacterType;
         }
     }
 
