@@ -11361,13 +11361,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 9000000, guid: 5e604c30447f0694ba627ea306ff03b7, type: 3}
   - {fileID: 0}
-  childs:
+  children:
   - {fileID: 676846079}
   - {fileID: 1518172404}
   - {fileID: 976364767}
   - {fileID: 1177627639}
   - {fileID: 100728049}
-  currentChild: {fileID: 676846079}
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0

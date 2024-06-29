@@ -10,6 +10,10 @@ public class CharacterTransformation : MonoBehaviour
     [SerializeField] Avatar[] avatars;
     [SerializeField] GameObject[] children;
     private GameObject currentChild;
+    private CharacterType currentType;
+
+    private float transformationCooldown = 5f;
+    private float nextTransformationTimes = 0f;
 
     private readonly Dictionary<CharacterType, int> characterIndexMap = new Dictionary<CharacterType, int>
     {
@@ -45,19 +49,28 @@ public class CharacterTransformation : MonoBehaviour
 
     public void SwitchCharacter(CharacterType newCharacterType)
     {
-        if (characterProperties.TryGetValue(newCharacterType, out CharacterProperties properties) &&
-            characterIndexMap.TryGetValue(newCharacterType, out int index))
+        if (Time.time > nextTransformationTimes)
         {
-            thirdPersonController.SetCharacterProperties(properties);
-            thirdPersonController._currentCharacterType = newCharacterType;
+            if (characterProperties.TryGetValue(newCharacterType, out CharacterProperties properties) &&
+                characterIndexMap.TryGetValue(newCharacterType, out int index))
+            {
+                thirdPersonController.SetCharacterProperties(properties);
+                thirdPersonController._currentCharacterType = newCharacterType;
 
-            animator.avatar = avatars[index];
+                animator.avatar = avatars[index];
 
-            if (currentChild != null)
-                currentChild.SetActive(false);
+                if (currentChild != null)
+                    currentChild.SetActive(false);
 
-            currentChild = children[index];
-            currentChild.SetActive(true);
+                currentChild = children[index];
+                currentChild.SetActive(true);
+                nextTransformationTimes = Time.time + transformationCooldown;
+                currentType = newCharacterType;
+            }
+        }
+        else
+        {
+            Debug.Log($"You can transform {nextTransformationTimes -Time.time} seconds later!");
         }
     }
 
@@ -75,7 +88,10 @@ public class CharacterTransformation : MonoBehaviour
 
         if (Input.inputString.Length > 0 && keyToCharacterTypeMap.TryGetValue(Input.inputString, out CharacterType characterType))
         {
-            SwitchCharacter(characterType);
+            if(characterType != currentType)
+            {
+                SwitchCharacter(characterType);
+            }
         }
     }
 }
