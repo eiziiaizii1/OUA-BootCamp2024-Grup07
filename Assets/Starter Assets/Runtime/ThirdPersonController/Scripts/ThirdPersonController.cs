@@ -326,7 +326,7 @@ namespace StarterAssets
             {
                 if (!isClimbing)
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (!Input.GetKeyDown(KeyCode.E))
                     {
                         float avoidFloorDistance = .1f;
                         float climbableGrabDistance = .4f;
