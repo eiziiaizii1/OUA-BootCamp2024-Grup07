@@ -532,11 +532,6 @@ namespace StarterAssets
             _controller.height = originalHeight * scale.y;
             _controller.center = originalCenter * scale.y;
             _controller.radius = originalRadius * scale.x;
-
-
-            //Vector3 position = transform.position;
-            //position.y += originalHeight;
-            //transform.position = position;
         }
     }
 }
