@@ -65,9 +65,16 @@ public class Door : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    // Kapıyı açma sürecini başlat
-                    shouldOpen = true;
-                    //interactText.gameObject.SetActive(false); // E'ye basınca yazıyı gizle
+                    if (!player.GetChild(0).gameObject.activeInHierarchy)
+                    {
+                        Debug.Log("Door can be opened by a human!!!");
+                    }
+                    else
+                    {
+                        // Kapıyı açma sürecini başlat
+                        shouldOpen = true;
+                        //interactText.gameObject.SetActive(false); // E'ye basınca yazıyı gizle
+                    }
                 }
             }
             else
