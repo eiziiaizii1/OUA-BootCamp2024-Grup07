@@ -45,7 +45,8 @@ Embark on a thrilling interstellar adventure in "Abduction"! Abducted by mysteri
 
 - **Point Completion Logic**: Around 100-110 points are estimated for the whole project . When divided into 3 sprints, it was decided that the first sprint should start with at least 30 points
 
-- **Daily Scrum**: The Daily Scrum meetings were conducted through voice communication on Discord. When team members were not available, they communicated thier situations by text in Discord.
+- **Daily Scrum**: The Daily Scrum meetings were conducted through voice communication on Discord. When team members were not available, they communicated thier situations by text in Discord. <br>
+ [Meeting Screenshots](https://imgur.com/a/lyRLkC5)   
 
 - **Sprint board update**: 
 
