@@ -48,7 +48,15 @@ Embark on a thrilling interstellar adventure in "Abduction"! Abducted by mysteri
 - **Daily Scrum**: The Daily Scrum meetings were conducted through voice communication on Discord. When team members were not available, they communicated thier situations by text in Discord. <br>
  [Meeting Screenshots](https://imgur.com/a/lyRLkC5)   
 
-- **Sprint board update**: 
+<details>
+<summary> <strong> Sprint board update: <strong></summary>
+
+- Initial Board: ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v1.png) <br> <br>  
+- 2nd Version ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v2.png) <br> <br>  
+- 3rd Version ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v3.png) <br> <br>  
+
+</details>
+
 
 
 - **Product status**: Screenshots:
