@@ -52,15 +52,26 @@ Embark on a thrilling interstellar adventure in "Abduction"! Abducted by mysteri
 <summary> <strong> Sprint board update: <strong></summary>
 
 - Initial Board: ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v1.png) <br> <br>  
-- 2nd Version ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v2.png) <br> <br>  
-- 3rd Version ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v3.png) <br> <br>  
+- 2nd Version: ![2nd Version](ProjectManagement/Sprint1Documents/Board%20Screenshots/v2.png) <br> <br>  
+- 3rd Version: ![3rd Version](ProjectManagement/Sprint1Documents/Board%20Screenshots/v3.png) <br> <br>  
 
 </details>
 
+<details>
+<summary> <strong> Product status Screenshots: <strong></summary>
+
+- Human Model: <br> ![Human](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model1.png) <br> <br>  
+- Monkey Model: <br> ![Monkey](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model2.png)) <br> <br>  
+- Rabbit Model: <br> ![Rabbit](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model3.png)) <br> <br>
+- Turtle Model: <br> ![Turtle](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model4.png) <br> <br>
+- Beaver Model: <br> ![Beaver](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model5.png) <br> <br>
+<br> <br>
+- In-game Screenshot-1: <br> ![ss1](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game1.png) <br> <br>
+- In-game Screenshot-2: <br> ![ss2](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game2.png) <br> <br>
+- In-game Screenshot-3: <br> ![ss3](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game3.png) <br> <br>
 
 
-- **Product status**: Screenshots:
-
+</details>
 
   
 - **Sprint Review**: 
