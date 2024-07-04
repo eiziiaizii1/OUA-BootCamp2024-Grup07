@@ -9,11 +9,12 @@ public class CharacterTransformation : MonoBehaviour
 
     [SerializeField] Avatar[] avatars;
     [SerializeField] GameObject[] children;
+    [SerializeField] AnimatorOverrideController[] animatorControllers; // Static olmamalý
     private GameObject currentChild;
     private CharacterType currentType;
 
     private float transformationCooldown = 5f;
-    private float nextTransformationTimes = 0f;
+    private float nextTransformationTime = 0f;
 
     private readonly Dictionary<CharacterType, int> characterIndexMap = new Dictionary<CharacterType, int>
     {
@@ -24,14 +25,30 @@ public class CharacterTransformation : MonoBehaviour
         { CharacterType.Kangaroo, 4 }
     };
 
-    private readonly Dictionary<CharacterType, CharacterProperties> characterProperties = new Dictionary<CharacterType, CharacterProperties>
+    private Dictionary<CharacterType, CharacterProperties> characterProperties;
+    private Dictionary<CharacterType, AnimatorOverrideController> characterAnimControllers;
+
+    private void Awake()
     {
-        { CharacterType.Human,      new CharacterProperties(2f, 5.325f, 1.2f, 1f) },
-        { CharacterType.Rat,        new CharacterProperties(1.0f, 2.0f, 0.2f, 0.13f) },
-        { CharacterType.Chameleon,  new CharacterProperties(1.5f, 2.5f, 1.2f, 0.5f) },
-        { CharacterType.Monkey,     new CharacterProperties(3.0f, 5.0f, 2.0f, .65f) },
-        { CharacterType.Kangaroo,   new CharacterProperties(2.5f, 4.5f, 3.0f, 1.5f) }
-    };
+        // Initialize properties and controllers here
+        characterProperties = new Dictionary<CharacterType, CharacterProperties>
+        {
+            { CharacterType.Human,      new CharacterProperties(2f, 5.325f, 1.2f, 1f) },
+            { CharacterType.Rat,        new CharacterProperties(1.0f, 2.0f, 0.2f, 0.13f) },
+            { CharacterType.Chameleon,  new CharacterProperties(1.5f, 2.5f, 1.2f, 0.5f) },
+            { CharacterType.Monkey,     new CharacterProperties(3.0f, 5.0f, 2.0f, .65f) },
+            { CharacterType.Kangaroo,   new CharacterProperties(2.5f, 4.5f, 3.0f, 1.5f) }
+        };
+
+        characterAnimControllers = new Dictionary<CharacterType, AnimatorOverrideController>
+        {
+            { CharacterType.Human,      animatorControllers[0] },
+            { CharacterType.Rat,        animatorControllers[1] },
+            { CharacterType.Chameleon,  animatorControllers[2] },
+            { CharacterType.Monkey,     animatorControllers[0] },
+            { CharacterType.Kangaroo,   animatorControllers[0] }
+        };
+    }
 
     private void Start()
     {
@@ -40,6 +57,7 @@ public class CharacterTransformation : MonoBehaviour
         //Default is Human
         currentChild = children[0];
         currentChild.SetActive(true);
+        currentType = CharacterType.Human;
     }
 
     private void Update()
@@ -49,28 +67,34 @@ public class CharacterTransformation : MonoBehaviour
 
     public void SwitchCharacter(CharacterType newCharacterType)
     {
-        if (Time.time > nextTransformationTimes)
+        if (Time.time > nextTransformationTime)
         {
             if (characterProperties.TryGetValue(newCharacterType, out CharacterProperties properties) &&
-                characterIndexMap.TryGetValue(newCharacterType, out int index))
+                characterIndexMap.TryGetValue(newCharacterType, out int index) &&
+                characterAnimControllers.TryGetValue(newCharacterType, out AnimatorOverrideController controller))
             {
+                // Update character properties
                 thirdPersonController.SetCharacterProperties(properties);
                 thirdPersonController._currentCharacterType = newCharacterType;
 
+                // Update animator settings
                 animator.avatar = avatars[index];
+                animator.runtimeAnimatorController = controller;
 
+                // Switch active child
                 if (currentChild != null)
                     currentChild.SetActive(false);
 
                 currentChild = children[index];
                 currentChild.SetActive(true);
-                nextTransformationTimes = Time.time + transformationCooldown;
+
+                nextTransformationTime = Time.time + transformationCooldown;
                 currentType = newCharacterType;
             }
         }
         else
         {
-            Debug.Log($"You can transform {nextTransformationTimes -Time.time} seconds later!");
+            Debug.Log($"You can transform {nextTransformationTime - Time.time} seconds later!");
         }
     }
 
@@ -88,7 +112,7 @@ public class CharacterTransformation : MonoBehaviour
 
         if (Input.inputString.Length > 0 && keyToCharacterTypeMap.TryGetValue(Input.inputString, out CharacterType characterType))
         {
-            if(characterType != currentType)
+            if (characterType != currentType)
             {
                 SwitchCharacter(characterType);
             }
