@@ -22,13 +22,13 @@ public class CharacterTransformation : MonoBehaviour
     private float nextTransformationTime = 0f;
 
     private int currentIndex;
-    private GameObject currentChild;
+    [SerializeField] GameObject currentChild;
 
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         animator = GetComponent<Animator>();
-        SetCharacter(0); // Default is Human
+        //SetCharacter(0); // Default is Human
     }
 
     private void Update()

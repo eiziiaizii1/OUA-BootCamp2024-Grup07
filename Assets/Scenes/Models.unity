@@ -9746,9 +9746,9 @@ MonoBehaviour:
     avatar: {fileID: 9000000, guid: d17682da1c8de2b408e0e6d0f67bff32, type: 3}
     animatorController: {fileID: 22100000, guid: 211a8eceb6e7a7a4db754dc8f4943b1f, type: 2}
     properties:
-      MoveSpeed: 1.5
-      SprintSpeed: 2.5
-      JumpHeight: 1.2
+      MoveSpeed: 0.5
+      SprintSpeed: 0.75
+      JumpHeight: 0.5
       Scale: {x: 0.5, y: 0.5, z: 0.5}
   - characterType: 3
     model: {fileID: 6197865790018060109}
@@ -9769,6 +9769,7 @@ MonoBehaviour:
       JumpHeight: 3
       Scale: {x: 1, y: 1, z: 1}
   transformationCooldown: 5
+  currentChild: {fileID: 7118915412918348717}
 --- !u!95 &1094980345159250840
 Animator:
   serializedVersion: 5
