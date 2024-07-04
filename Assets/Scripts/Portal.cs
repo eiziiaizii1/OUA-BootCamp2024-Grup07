@@ -11,7 +11,7 @@ public class Portal : MonoBehaviour
     //bu yüzden build settingste bölümleri sıralı yerleştimelisiniz
     //şuan için test amaçlı boş bir sahne açıyor 
 
-
+    public bool PortaldanGecti = false;
 
     void Start()
     {
@@ -32,6 +32,7 @@ public class Portal : MonoBehaviour
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             // Bir sonraki sahneye geç
             SceneManager.LoadScene(currentSceneIndex + 1);
+            PortaldanGecti = true;
         }
     }
 }

@@ -16996,6 +16996,11 @@ Transform:
   - {fileID: 1999313140}
   m_Father: {fileID: 420384302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1917848254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6137660477436241182, guid: b88f0d88dcf59184fadaf4b4219b8539, type: 3}
+  m_PrefabInstance: {fileID: 7050396802671094583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1918082184
 GameObject:
   m_ObjectHideFlags: 0
@@ -18762,11 +18767,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae924e213a725b42a39d35b4df37a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
-  openYPosition: 0
+  door: {fileID: 1027568028582778576}
+  openYPosition: 6
   speed: 2
-  cardObject: {fileID: 0}
-  player: {fileID: 0}
+  cardObject: {fileID: 1917848254}
+  player: {fileID: 3893294199639930361}
   interactDistance: 3
 --- !u!4 &814663134980474451
 Transform:
