@@ -23,6 +23,7 @@ namespace StarterAssets
         Kangaroo
     }
 
+    [System.Serializable]
     public struct CharacterProperties
     {
         public float MoveSpeed;
@@ -179,6 +180,7 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            _controller = GetComponent<CharacterController>();
         }
 
         private void Start()
@@ -186,7 +188,7 @@ namespace StarterAssets
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
-            _controller = GetComponent<CharacterController>();
+            //_controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
             _playerInput = GetComponent<PlayerInput>();
@@ -524,7 +526,6 @@ namespace StarterAssets
             AdjustCharacterController(properties.Scale);
 
             transform.GetChild(0).localScale = properties.Scale;
- 
         }
 
         private void AdjustCharacterController(Vector3 scale)

@@ -9722,22 +9722,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fc53c98e8bbdd4bad11985a31124cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatars:
-  - {fileID: 9000000, guid: b795a574646b4ba46bcfc06769cb3fbd, type: 3}
-  - {fileID: 9000000, guid: 3aecf772a15330d4eb67bc5eeb7b12dc, type: 3}
-  - {fileID: 9000000, guid: d17682da1c8de2b408e0e6d0f67bff32, type: 3}
-  - {fileID: 9000000, guid: 5e604c30447f0694ba627ea306ff03b7, type: 3}
-  - {fileID: 9000000, guid: d32f8e7e1ba08c64d893f61586da43bb, type: 3}
-  children:
-  - {fileID: 7118915412918348717}
-  - {fileID: 3692479520412466482}
-  - {fileID: 1446649665348343229}
-  - {fileID: 6197865790018060109}
-  - {fileID: 8888334168410215041}
-  animatorControllers:
-  - {fileID: 22100000, guid: ca867e2391c6cb34ab6adaf0cb9fa365, type: 2}
-  - {fileID: 22100000, guid: f059ed9eaf883b3478f4df5c3aea6925, type: 2}
-  - {fileID: 22100000, guid: 211a8eceb6e7a7a4db754dc8f4943b1f, type: 2}
+  characterConfigs:
+  - characterType: 0
+    model: {fileID: 7118915412918348717}
+    avatar: {fileID: 9000000, guid: b795a574646b4ba46bcfc06769cb3fbd, type: 3}
+    animatorController: {fileID: 22100000, guid: ca867e2391c6cb34ab6adaf0cb9fa365, type: 2}
+    properties:
+      MoveSpeed: 2
+      SprintSpeed: 5.325
+      JumpHeight: 1.2
+      Scale: {x: 1, y: 1, z: 1}
+  - characterType: 1
+    model: {fileID: 3692479520412466482}
+    avatar: {fileID: 9000000, guid: 3aecf772a15330d4eb67bc5eeb7b12dc, type: 3}
+    animatorController: {fileID: 22100000, guid: f059ed9eaf883b3478f4df5c3aea6925, type: 2}
+    properties:
+      MoveSpeed: 1
+      SprintSpeed: 2
+      JumpHeight: 0.2
+      Scale: {x: 0.13, y: 0.13, z: 0.13}
+  - characterType: 2
+    model: {fileID: 1446649665348343229}
+    avatar: {fileID: 9000000, guid: d17682da1c8de2b408e0e6d0f67bff32, type: 3}
+    animatorController: {fileID: 22100000, guid: 211a8eceb6e7a7a4db754dc8f4943b1f, type: 2}
+    properties:
+      MoveSpeed: 1.5
+      SprintSpeed: 2.5
+      JumpHeight: 1.2
+      Scale: {x: 0.5, y: 0.5, z: 0.5}
+  - characterType: 3
+    model: {fileID: 6197865790018060109}
+    avatar: {fileID: 9000000, guid: 5e604c30447f0694ba627ea306ff03b7, type: 3}
+    animatorController: {fileID: 22100000, guid: ca867e2391c6cb34ab6adaf0cb9fa365, type: 2}
+    properties:
+      MoveSpeed: 3
+      SprintSpeed: 5
+      JumpHeight: 2
+      Scale: {x: 0.65, y: 0.65, z: 0.65}
+  - characterType: 4
+    model: {fileID: 8888334168410215041}
+    avatar: {fileID: 9000000, guid: d32f8e7e1ba08c64d893f61586da43bb, type: 3}
+    animatorController: {fileID: 22100000, guid: ca867e2391c6cb34ab6adaf0cb9fa365, type: 2}
+    properties:
+      MoveSpeed: 2.5
+      SprintSpeed: 4.5
+      JumpHeight: 3
+      Scale: {x: 1, y: 1, z: 1}
+  transformationCooldown: 5
 --- !u!95 &1094980345159250840
 Animator:
   serializedVersion: 5

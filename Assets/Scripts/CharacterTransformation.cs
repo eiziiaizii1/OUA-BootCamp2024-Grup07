@@ -2,62 +2,33 @@ using StarterAssets;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class CharacterConfig
+{
+    public CharacterType characterType;
+    public GameObject model;
+    public Avatar avatar;
+    public AnimatorOverrideController animatorController;
+    public CharacterProperties properties;
+}
+
 public class CharacterTransformation : MonoBehaviour
 {
     private ThirdPersonController thirdPersonController;
     private Animator animator;
 
-    [SerializeField] Avatar[] avatars;
-    [SerializeField] GameObject[] children;
-    [SerializeField] AnimatorOverrideController[] animatorControllers; // Static olmamalý
-    private GameObject currentChild;
-    private CharacterType currentType;
-
-    private float transformationCooldown = 5f;
+    [SerializeField] private CharacterConfig[] characterConfigs; // All configs in one array
+    [SerializeField] private float transformationCooldown = 5f;
     private float nextTransformationTime = 0f;
 
-    private readonly Dictionary<CharacterType, int> characterIndexMap = new Dictionary<CharacterType, int>
-    {
-        { CharacterType.Human, 0 },
-        { CharacterType.Rat, 1 },
-        { CharacterType.Chameleon, 2 },
-        { CharacterType.Monkey, 3 },
-        { CharacterType.Kangaroo, 4 }
-    };
-
-    private Dictionary<CharacterType, CharacterProperties> characterProperties;
-    private Dictionary<CharacterType, AnimatorOverrideController> characterAnimControllers;
-
-    private void Awake()
-    {
-        // Initialize properties and controllers here
-        characterProperties = new Dictionary<CharacterType, CharacterProperties>
-        {
-            { CharacterType.Human,      new CharacterProperties(2f, 5.325f, 1.2f, 1f) },
-            { CharacterType.Rat,        new CharacterProperties(1.0f, 2.0f, 0.2f, 0.13f) },
-            { CharacterType.Chameleon,  new CharacterProperties(1.5f, 2.5f, 1.2f, 0.5f) },
-            { CharacterType.Monkey,     new CharacterProperties(3.0f, 5.0f, 2.0f, .65f) },
-            { CharacterType.Kangaroo,   new CharacterProperties(2.5f, 4.5f, 3.0f, 1.5f) }
-        };
-
-        characterAnimControllers = new Dictionary<CharacterType, AnimatorOverrideController>
-        {
-            { CharacterType.Human,      animatorControllers[0] },
-            { CharacterType.Rat,        animatorControllers[1] },
-            { CharacterType.Chameleon,  animatorControllers[2] },
-            { CharacterType.Monkey,     animatorControllers[0] },
-            { CharacterType.Kangaroo,   animatorControllers[0] }
-        };
-    }
+    private int currentIndex;
+    private GameObject currentChild;
 
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         animator = GetComponent<Animator>();
-        //Default is Human
-        currentChild = children[0];
-        currentChild.SetActive(true);
-        currentType = CharacterType.Human;
+        SetCharacter(0); // Default is Human
     }
 
     private void Update()
@@ -65,32 +36,12 @@ public class CharacterTransformation : MonoBehaviour
         CheckCharacterSwitchInput();
     }
 
-    public void SwitchCharacter(CharacterType newCharacterType)
+    public void SwitchCharacter(int index)
     {
-        if (Time.time > nextTransformationTime)
+        if (Time.time > nextTransformationTime && index >= 0 && index < characterConfigs.Length && index != currentIndex)
         {
-            if (characterProperties.TryGetValue(newCharacterType, out CharacterProperties properties) &&
-                characterIndexMap.TryGetValue(newCharacterType, out int index) &&
-                characterAnimControllers.TryGetValue(newCharacterType, out AnimatorOverrideController controller))
-            {
-                // Update character properties
-                thirdPersonController.SetCharacterProperties(properties);
-                thirdPersonController._currentCharacterType = newCharacterType;
-
-                // Update animator settings
-                animator.avatar = avatars[index];
-                animator.runtimeAnimatorController = controller;
-
-                // Switch active child
-                if (currentChild != null)
-                    currentChild.SetActive(false);
-
-                currentChild = children[index];
-                currentChild.SetActive(true);
-
-                nextTransformationTime = Time.time + transformationCooldown;
-                currentType = newCharacterType;
-            }
+            SetCharacter(index);
+            nextTransformationTime = Time.time + transformationCooldown;
         }
         else
         {
@@ -98,24 +49,29 @@ public class CharacterTransformation : MonoBehaviour
         }
     }
 
+    private void SetCharacter(int index)
+    {
+        if (currentChild != null)
+            currentChild.SetActive(false);
+
+        var config = characterConfigs[index];
+        currentChild = config.model;
+        currentChild.SetActive(true);
+
+        thirdPersonController.SetCharacterProperties(config.properties);
+        thirdPersonController._currentCharacterType = config.characterType;
+
+        animator.avatar = config.avatar;
+        animator.runtimeAnimatorController = config.animatorController;
+
+        currentIndex = index;
+    }
+
     private void CheckCharacterSwitchInput()
     {
-        // Map keys 0-4 to character types
-        Dictionary<string, CharacterType> keyToCharacterTypeMap = new Dictionary<string, CharacterType>
+        if (Input.inputString.Length > 0 && int.TryParse(Input.inputString, out int index))
         {
-            { "0", CharacterType.Human },
-            { "1", CharacterType.Rat },
-            { "2", CharacterType.Chameleon },
-            { "3", CharacterType.Monkey },
-            { "4", CharacterType.Kangaroo }
-        };
-
-        if (Input.inputString.Length > 0 && keyToCharacterTypeMap.TryGetValue(Input.inputString, out CharacterType characterType))
-        {
-            if (characterType != currentType)
-            {
-                SwitchCharacter(characterType);
-            }
+            SwitchCharacter(index);
         }
     }
 }
