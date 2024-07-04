@@ -17,12 +17,13 @@ namespace StarterAssets
     public enum CharacterType
     {
         Human,
-        Rat,
-        Chameleon,
+        Beaver,
+        Turtle,
         Monkey,
         Kangaroo
     }
 
+    [System.Serializable]
     public struct CharacterProperties
     {
         public float MoveSpeed;
@@ -179,6 +180,7 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            //_controller = GetComponent<CharacterController>();
         }
 
         private void Start()
@@ -524,7 +526,6 @@ namespace StarterAssets
             AdjustCharacterController(properties.Scale);
 
             transform.GetChild(0).localScale = properties.Scale;
- 
         }
 
         private void AdjustCharacterController(Vector3 scale)
