@@ -51,6 +51,23 @@ namespace StarterAssets
         private Vector3 originalCenter;
         private float originalRadius;
 
+        private float originalGroundedRadius;
+        private float originalGroundedOffset;
+
+        private float originalMoveSpeed;
+        private float originalSprintSpeed;
+        private float originalRotationSmoothTime;
+        private float originalSpeedChangeRate;
+        private float originalFootstepAudioVolume;
+        private float originalJumpHeight;
+        private float originalGravity;
+        private float originalJumpTimeout;
+        private float originalFallTimeout;
+        private float originalTopClamp;
+        private float originalBottomClamp;
+        private float originalCameraAngleOverride;
+
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -205,6 +222,23 @@ namespace StarterAssets
             originalHeight = _controller.height;
             originalCenter = _controller.center;
             originalRadius = _controller.radius;
+
+            originalGroundedRadius = GroundedRadius;
+            originalGroundedOffset = GroundedOffset;
+
+
+            originalMoveSpeed = MoveSpeed;
+            originalSprintSpeed = SprintSpeed;
+            originalRotationSmoothTime = RotationSmoothTime;
+            originalSpeedChangeRate = SpeedChangeRate;
+            originalFootstepAudioVolume = FootstepAudioVolume;
+            originalJumpHeight = JumpHeight;
+            originalGravity = Gravity;
+            originalJumpTimeout = JumpTimeout;
+            originalFallTimeout = FallTimeout;
+            originalTopClamp = TopClamp;
+            originalBottomClamp = BottomClamp;
+            originalCameraAngleOverride = CameraAngleOverride;
         }
 
         private void Update()
@@ -519,11 +553,11 @@ namespace StarterAssets
 
         public void SetCharacterProperties(CharacterProperties properties)
         {
+            AdjustCharacterController(properties.Scale);
+
             MoveSpeed = properties.MoveSpeed;
             SprintSpeed = properties.SprintSpeed;
             JumpHeight = properties.JumpHeight;
-
-            AdjustCharacterController(properties.Scale);
 
             transform.GetChild(0).localScale = properties.Scale;
         }
@@ -533,6 +567,27 @@ namespace StarterAssets
             _controller.height = originalHeight * scale.y;
             _controller.center = originalCenter * scale.y;
             _controller.radius = originalRadius * scale.x;
+
+            GroundedRadius = originalGroundedRadius * scale.x;
+            GroundedOffset = originalGroundedOffset * scale.x;
+
+
+            MoveSpeed = originalMoveSpeed * scale.x;
+            SprintSpeed = originalSprintSpeed * scale.x;
+            //RotationSmoothTime = originalRotationSmoothTime * scale.x;
+            SpeedChangeRate = originalSpeedChangeRate * scale.x;
+
+            FootstepAudioVolume = originalFootstepAudioVolume * scale.x;
+
+            JumpHeight = originalJumpHeight * scale.y;
+            //Gravity = originalGravity * scale.y;
+
+            JumpTimeout = originalJumpTimeout * scale.z;
+            FallTimeout = originalFallTimeout * scale.z;
+
+            //TopClamp = originalTopClamp * scale.z;
+            //BottomClamp = originalBottomClamp * scale.z;
+            //CameraAngleOverride = originalCameraAngleOverride * scale.z;
         }
     }
 }
