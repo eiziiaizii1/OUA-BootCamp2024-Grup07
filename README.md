@@ -12,7 +12,7 @@ Unity Group-7
   
 
 ## Ürün İsmi
-***Abduction***
+***Animorph Odyssey***
 
 ## Product Backlog URL
 
@@ -20,7 +20,7 @@ Unity Group-7
 
 ## Product Description
 
-Embark on a thrilling interstellar adventure in "Abduction"! Abducted by mysterious aliens, our protagonist discovers a unique tool that grants the power to transform into various creatures. Utilize these transformations to leverage each creature’s distinct abilities and solve intricate puzzles. Navigate through captivating alien environments, outwit your captors, and plot your daring escape from the depths of space.
+Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by mysterious aliens, our protagonist discovers a unique tool that grants the power to transform into various creatures. Utilize these transformations to leverage each creature’s distinct abilities and solve intricate puzzles. Navigate through captivating alien environments, outwit your captors, and plot your daring escape from the depths of space.
 
 ## Product Features
 - Immersive 3D Graphics
