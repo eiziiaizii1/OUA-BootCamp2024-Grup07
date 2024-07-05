@@ -54,18 +54,16 @@ namespace StarterAssets
         private float originalGroundedRadius;
         private float originalGroundedOffset;
 
-        private float originalMoveSpeed;
-        private float originalSprintSpeed;
-        private float originalRotationSmoothTime;
+        
         private float originalSpeedChangeRate;
         private float originalFootstepAudioVolume;
-        private float originalJumpHeight;
-        private float originalGravity;
         private float originalJumpTimeout;
         private float originalFallTimeout;
-        private float originalTopClamp;
-        private float originalBottomClamp;
-        private float originalCameraAngleOverride;
+
+        private float originalSlopeLimit;
+        private float originalStepOffset;
+        private float originalSkinWidth;
+
 
 
         [Header("Player")]
@@ -226,19 +224,14 @@ namespace StarterAssets
             originalGroundedRadius = GroundedRadius;
             originalGroundedOffset = GroundedOffset;
 
-
-            originalMoveSpeed = MoveSpeed;
-            originalSprintSpeed = SprintSpeed;
-            originalRotationSmoothTime = RotationSmoothTime;
             originalSpeedChangeRate = SpeedChangeRate;
             originalFootstepAudioVolume = FootstepAudioVolume;
-            originalJumpHeight = JumpHeight;
-            originalGravity = Gravity;
             originalJumpTimeout = JumpTimeout;
             originalFallTimeout = FallTimeout;
-            originalTopClamp = TopClamp;
-            originalBottomClamp = BottomClamp;
-            originalCameraAngleOverride = CameraAngleOverride;
+
+            originalSlopeLimit = _controller.slopeLimit;
+            originalStepOffset = _controller.stepOffset;
+            originalSkinWidth = _controller.skinWidth;
         }
 
         private void Update()
@@ -572,22 +565,14 @@ namespace StarterAssets
             GroundedOffset = originalGroundedOffset * scale.x;
 
 
-            MoveSpeed = originalMoveSpeed * scale.x;
-            SprintSpeed = originalSprintSpeed * scale.x;
-            //RotationSmoothTime = originalRotationSmoothTime * scale.x;
             SpeedChangeRate = originalSpeedChangeRate * scale.x;
-
             FootstepAudioVolume = originalFootstepAudioVolume * scale.x;
-
-            JumpHeight = originalJumpHeight * scale.y;
-            //Gravity = originalGravity * scale.y;
-
             JumpTimeout = originalJumpTimeout * scale.z;
             FallTimeout = originalFallTimeout * scale.z;
 
-            //TopClamp = originalTopClamp * scale.z;
-            //BottomClamp = originalBottomClamp * scale.z;
-            //CameraAngleOverride = originalCameraAngleOverride * scale.z;
+            _controller.slopeLimit = originalSlopeLimit * scale.z;
+            _controller.stepOffset = originalStepOffset * scale.z;
+            _controller.skinWidth = originalSkinWidth * scale.x;
         }
     }
 }
