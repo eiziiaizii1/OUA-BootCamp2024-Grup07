@@ -49,7 +49,7 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 </details>
 
 <details>
-<summary> <strong> Product status screenshots <strong></summary>
+<summary> <strong> Product status screenshots </strong> </summary>
   
 - Human Model: <br> ![Human](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model1.png) <br> <br>  
 - Monkey Model: <br> ![Monkey](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model2.png)) <br> <br>  
@@ -64,7 +64,7 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 </details>
 
 <details> 
-<summary> <strong> Burndown Chart <strong> </summary>
+<summary> <strong> Burndown Chart </strong> </summary>
   
 - Burndown Chart: <br> ![Burndown Chart](ProjectManagement/Sprint1Documents/BurndownChart.png) <br> <br>
 
