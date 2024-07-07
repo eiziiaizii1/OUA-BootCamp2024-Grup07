@@ -66,7 +66,7 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 <details> 
 <summary> <strong> Burndown Chart <strong> </summary>
   
-- Burndown Chart: ![Burndown Chart](ProjectManagement/Sprint1Documents/Board%20Screenshots/v1.png) <br> <br>
+- Burndown Chart: <br> ![Burndown Chart](ProjectManagement/Sprint1Documents/BurndownChart.png) <br> <br>
 
 </details>
 
