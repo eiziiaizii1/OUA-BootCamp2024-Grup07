@@ -426,11 +426,13 @@ namespace StarterAssets
         private void GrabLadder(Vector3 lastGrabDirection)
         {
             isClimbing = true;
+            _animator.SetBool("isClimbing", true);
             this.lastGrabDirection = lastGrabDirection;
         }
 
         private void DropLadder()
         {
+            _animator.SetBool("isClimbing", false);
             isClimbing = false;
         }
 
@@ -455,7 +457,7 @@ namespace StarterAssets
                 }
 
                 // Jump
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+                if (_input.jump && _jumpTimeoutDelta <= 0.0f && !isClimbing)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
