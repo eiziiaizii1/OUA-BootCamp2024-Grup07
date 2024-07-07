@@ -89,6 +89,7 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
     - Although we set up the level scoring system, we couldn’t test it comprehensively as only the tutorial level was ready.
     - Due to some differences in the Firebase system between desktop and Android, we decided to postpone Firebase rlated tasks to the second sprint.
     - Despite our lack of experience in 3D game development and the absence of a designer in the team, we managed to achieve our overall goals in this sprint.
+    - **Sprint Review Participants:** `Aziz Önder`, `Ayberk Yaşar`, `Beyza Özkan`
 
 - ### **Sprint Retrospective:**
     - Due to communication issues within the team, it was decided to create a WhatsApp group, in addition to the Discord server, to ensure more effective communication in the next sprint.
