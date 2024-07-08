@@ -51,6 +51,21 @@ namespace StarterAssets
         private Vector3 originalCenter;
         private float originalRadius;
 
+        private float originalGroundedRadius;
+        private float originalGroundedOffset;
+
+        
+        private float originalSpeedChangeRate;
+        private float originalFootstepAudioVolume;
+        private float originalJumpTimeout;
+        private float originalFallTimeout;
+
+        private float originalSlopeLimit;
+        private float originalStepOffset;
+        private float originalSkinWidth;
+
+
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -205,6 +220,18 @@ namespace StarterAssets
             originalHeight = _controller.height;
             originalCenter = _controller.center;
             originalRadius = _controller.radius;
+
+            originalGroundedRadius = GroundedRadius;
+            originalGroundedOffset = GroundedOffset;
+
+            originalSpeedChangeRate = SpeedChangeRate;
+            originalFootstepAudioVolume = FootstepAudioVolume;
+            originalJumpTimeout = JumpTimeout;
+            originalFallTimeout = FallTimeout;
+
+            originalSlopeLimit = _controller.slopeLimit;
+            originalStepOffset = _controller.stepOffset;
+            originalSkinWidth = _controller.skinWidth;
         }
 
         private void Update()
@@ -380,6 +407,13 @@ namespace StarterAssets
                     _verticalVelocity = 0f;
                     Grounded = true;
                     _speed = targetSpeed;
+
+                    bool isMovingVertically = Mathf.Abs(_input.move.y) > 0.1f;
+                    _animator.SetFloat("ClimbSpeed", isMovingVertically ? 1.0f : 0.0f);
+                }
+                else
+                {
+                    _animator.SetFloat("ClimbSpeed", 0.0f);
                 }
             }
 
@@ -396,14 +430,17 @@ namespace StarterAssets
             }
         }
 
+
         private void GrabLadder(Vector3 lastGrabDirection)
         {
             isClimbing = true;
+            _animator.SetBool("isClimbing", true);
             this.lastGrabDirection = lastGrabDirection;
         }
 
         private void DropLadder()
         {
+            _animator.SetBool("isClimbing", false);
             isClimbing = false;
         }
 
@@ -428,7 +465,7 @@ namespace StarterAssets
                 }
 
                 // Jump
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+                if (_input.jump && _jumpTimeoutDelta <= 0.0f && !isClimbing)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -519,11 +556,11 @@ namespace StarterAssets
 
         public void SetCharacterProperties(CharacterProperties properties)
         {
+            AdjustCharacterController(properties.Scale);
+
             MoveSpeed = properties.MoveSpeed;
             SprintSpeed = properties.SprintSpeed;
             JumpHeight = properties.JumpHeight;
-
-            AdjustCharacterController(properties.Scale);
 
             transform.GetChild(0).localScale = properties.Scale;
         }
@@ -533,6 +570,19 @@ namespace StarterAssets
             _controller.height = originalHeight * scale.y;
             _controller.center = originalCenter * scale.y;
             _controller.radius = originalRadius * scale.x;
+
+            GroundedRadius = originalGroundedRadius * scale.x;
+            GroundedOffset = originalGroundedOffset * scale.x;
+
+
+            SpeedChangeRate = originalSpeedChangeRate * scale.x;
+            FootstepAudioVolume = originalFootstepAudioVolume * scale.x;
+            JumpTimeout = originalJumpTimeout * scale.z;
+            FallTimeout = originalFallTimeout * scale.z;
+
+            _controller.slopeLimit = originalSlopeLimit * scale.z;
+            _controller.stepOffset = originalStepOffset * scale.z;
+            _controller.skinWidth = originalSkinWidth * scale.x;
         }
     }
 }

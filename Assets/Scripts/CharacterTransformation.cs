@@ -1,4 +1,5 @@
 using StarterAssets;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,7 +46,7 @@ public class CharacterTransformation : MonoBehaviour
         }
         else
         {
-            Debug.Log($"You can transform {nextTransformationTime - Time.time} seconds later!");
+            Debug.Log($"You can transform {Math.Clamp(0,nextTransformationTime - Time.time, transformationCooldown)} seconds later!");
         }
     }
 
