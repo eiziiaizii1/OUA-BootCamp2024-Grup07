@@ -407,6 +407,13 @@ namespace StarterAssets
                     _verticalVelocity = 0f;
                     Grounded = true;
                     _speed = targetSpeed;
+
+                    bool isMovingVertically = Mathf.Abs(_input.move.y) > 0.1f;
+                    _animator.SetFloat("ClimbSpeed", isMovingVertically ? 1.0f : 0.0f);
+                }
+                else
+                {
+                    _animator.SetFloat("ClimbSpeed", 0.0f);
                 }
             }
 
@@ -422,6 +429,7 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
+
 
         private void GrabLadder(Vector3 lastGrabDirection)
         {

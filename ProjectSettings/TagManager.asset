@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Climbable
+  - Ground
   layers:
   - Default
   - TransparentFX
