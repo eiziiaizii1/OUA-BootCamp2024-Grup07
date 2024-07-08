@@ -295,31 +295,20 @@ namespace StarterAssets
 
         private void Move()
         {
-            // set target speed based on move speed, sprint speed and if sprint is pressed
+            // Set target speed based on move speed, sprint speed, and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
-            // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
-
-            // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-            // if there is no input, set the target speed to 0
+            // Simplistic acceleration and deceleration
             if (_input.move == Vector2.zero) targetSpeed = 0.0f;
 
-            // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
-
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
-            // accelerate or decelerate to target speed
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
                 currentHorizontalSpeed > targetSpeed + speedOffset)
             {
-                // creates curved result rather than a linear one giving a more organic speed change
-                // note T in Lerp is clamped, so we don't need to clamp our speed
-                _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
-                    Time.deltaTime * SpeedChangeRate);
-
-                // round speed to 3 decimal places
+                _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
                 _speed = Mathf.Round(_speed * 1000f) / 1000f;
             }
             else
@@ -330,49 +319,35 @@ namespace StarterAssets
             _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
             if (_animationBlend < 0.01f) _animationBlend = 0f;
 
-            // normalise input direction
             Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 
-            // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-            // if there is a move input rotate player when the player is moving
-            if (_input.move != Vector2.zero)
+            if (_input.move != Vector2.zero && !isClimbing)
             {
-                _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
-                                  _mainCamera.transform.eulerAngles.y;
-                float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
-                    RotationSmoothTime);
-
-                // rotate to face input direction relative to camera position
+                _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
+                float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
             }
 
-
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-
-            //For climbing mechanic
 
             if (_currentCharacterType == CharacterType.Monkey)
             {
                 if (!isClimbing)
                 {
-                    if (!Input.GetKeyDown(KeyCode.E))
+                    float avoidFloorDistance = 0.1f;
+                    float climbableGrabDistance = 0.4f;
+                    if (Physics.Raycast(transform.position + Vector3.up * avoidFloorDistance, targetDirection, out RaycastHit raycastHit, climbableGrabDistance))
                     {
-                        float avoidFloorDistance = .1f;
-                        float climbableGrabDistance = .4f;
-                        if (Physics.Raycast(transform.position + Vector3.up * avoidFloorDistance, targetDirection, out RaycastHit raycastHit, climbableGrabDistance))
+                        if (raycastHit.transform.CompareTag("Climbable"))
                         {
-                            if (raycastHit.transform.CompareTag("Climbable"))
-                            {
-                                GrabLadder(targetDirection);
-                                //Debug.Log(raycastHit);
-                            }
+                            GrabLadder(targetDirection);
                         }
                     }
                 }
                 else
                 {
-                    float avoidFloorDistance = .1f;
-                    float climbableGrabDistance = .4f;
+                    float avoidFloorDistance = 0.1f;
+                    float climbableGrabDistance = 0.4f;
                     if (Physics.Raycast(transform.position + Vector3.up * avoidFloorDistance, lastGrabDirection, out RaycastHit raycastHit, climbableGrabDistance))
                     {
                         if (!raycastHit.transform.CompareTag("Climbable"))
@@ -389,46 +364,59 @@ namespace StarterAssets
 
                     if (Vector3.Dot(targetDirection, lastGrabDirection) < 0f)
                     {
-                        // climbing down the object
-                        float climbableFloorDropDistance = .1f;
+                        float climbableFloorDropDistance = 0.1f;
                         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit floorRaycastHit, climbableFloorDropDistance))
                         {
                             DropLadder();
                         }
                     }
-                }
 
+                    // Check if the player is moving downwards
+                    if (_input.move.y < 0f)
+                    {
+                        float groundCheckDistance = 0.2f;
+                        // Check if the bottom of the climbable object is ground
+                        if (Physics.Raycast(transform.position + Vector3.up * avoidFloorDistance, Vector3.down, out RaycastHit groundHit, groundCheckDistance))
+                        {
+                            if (groundHit.transform.CompareTag("Ground"))
+                            {
+                                DropLadder();
+                            }
+                        }
+                    }
 
-                if (isClimbing)
-                {
-                    targetDirection.x = 0f;
-                    targetDirection.y = targetDirection.z;
-                    targetDirection.z = 0f;
-                    _verticalVelocity = 0f;
-                    Grounded = true;
-                    _speed = targetSpeed;
+                    if (isClimbing)
+                    {
+                        targetDirection.x = 0f;
+                        targetDirection.y = _input.move.y;  // Allow vertical movement (when not rotated)
+                        targetDirection.z = 0f;
+                        _verticalVelocity = 0f;
+                        Grounded = true;
+                        _speed = targetSpeed;
 
-                    bool isMovingVertically = Mathf.Abs(_input.move.y) > 0.1f;
-                    _animator.SetFloat("ClimbSpeed", isMovingVertically ? 1.0f : 0.0f);
-                }
-                else
-                {
-                    _animator.SetFloat("ClimbSpeed", 0.0f);
+                        // Pause or resume climbing animation based on vertical movement
+                        bool isMovingVertically = Mathf.Abs(_input.move.y) > 0.1f;
+                        _animator.SetFloat("ClimbSpeed", isMovingVertically ? 1.0f : 0.0f);
+                    }
+                    else
+                    {
+                        _animator.SetFloat("ClimbSpeed", 0.0f);
+                    }
                 }
             }
 
-
-            // move the player
+            // Move the player
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
-            // update animator if using character
+            // Update animator if using character
             if (_hasAnimator)
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
+
 
 
         private void GrabLadder(Vector3 lastGrabDirection)
