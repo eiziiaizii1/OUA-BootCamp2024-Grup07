@@ -4,17 +4,49 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private WayPointPath waypointPath;
+    [SerializeField] private float speed;
+
+    private int targetWaypointIndex;
+
+    private Transform prevWaypoint;
+    private Transform targetWaypoint;
+
+    private float timeToWayPoint;
+    private float elapsedTime;
+
+    private void Start()
     {
-        
+        TargetWaypoint();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        elapsedTime += Time.deltaTime;
+
+        float elapsedPercentage = elapsedTime / timeToWayPoint;
+        transform.position = Vector3.Lerp(prevWaypoint.position, targetWaypoint.position, elapsedPercentage);
+
+        if (elapsedPercentage >= 1f)
+        {
+            TargetWaypoint();
+        }
     }
+
+
+    private void TargetWaypoint()
+    {
+        prevWaypoint = waypointPath.GetWaypoint(targetWaypointIndex);
+        targetWaypointIndex = waypointPath.GetNextWaypointIndex(targetWaypointIndex);
+        targetWaypoint = waypointPath.GetWaypoint(targetWaypointIndex);
+
+        elapsedTime = 0f;
+
+        float distanceToWaypoint = Vector3.Distance(prevWaypoint.position, targetWaypoint.position);
+        timeToWayPoint = distanceToWaypoint / speed;
+    }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
