@@ -568,8 +568,8 @@ namespace StarterAssets
             JumpTimeout = originalJumpTimeout * scale.z;
             FallTimeout = originalFallTimeout * scale.z;
 
-            _controller.slopeLimit = originalSlopeLimit * scale.z;
-            _controller.stepOffset = originalStepOffset * scale.z;
+            //_controller.slopeLimit = originalSlopeLimit * scale.z;
+            //_controller.stepOffset = originalStepOffset * scale.z;
             _controller.skinWidth = originalSkinWidth * scale.x;
         }
     }

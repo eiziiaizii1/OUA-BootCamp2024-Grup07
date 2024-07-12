@@ -10632,7 +10632,7 @@ MonoBehaviour:
       SprintSpeed: 4.5
       JumpHeight: 3
       Scale: {x: 1, y: 1, z: 1}
-  transformationCooldown: 5
+  transformationCooldown: 3
   currentChild: {fileID: 2457010717668408215}
 --- !u!114 &6743538598346219915
 MonoBehaviour:

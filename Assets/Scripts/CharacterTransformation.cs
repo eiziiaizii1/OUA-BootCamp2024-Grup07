@@ -19,7 +19,7 @@ public class CharacterTransformation : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private CharacterConfig[] characterConfigs; // All configs in one array
-    [SerializeField] private float transformationCooldown = 5f;
+    [SerializeField] private float transformationCooldown = 3f;
     private float nextTransformationTime = 0f;
 
     private int currentIndex;

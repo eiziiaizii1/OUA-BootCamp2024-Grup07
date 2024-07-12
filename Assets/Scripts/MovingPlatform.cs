@@ -20,7 +20,7 @@ public class MovingPlatform : MonoBehaviour
         TargetWaypoint();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         elapsedTime += Time.deltaTime;
 
