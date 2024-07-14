@@ -102,7 +102,8 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 
 
-- **Daily Scrum**: 
+- **Daily Scrum**: <br>
+ [Meeting Screenshots](https://imgur.com/a/CDPMuYo)    
 
 - **Sprint board update**: Sprint board screenshotları: 
 
