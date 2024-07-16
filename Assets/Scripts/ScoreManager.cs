@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
 
 
 
-    private Portal Kontrol;
+    public Portal Kontrol;
 
 
 
