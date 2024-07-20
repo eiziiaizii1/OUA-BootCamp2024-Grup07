@@ -103,40 +103,45 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 <details> 
 <summary> <strong> Sprint board update screenshots </strong> </summary>
   
-- Initial Board: ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v1.png) <br> <br>  
-- 2nd Version: ![2nd Version](ProjectManagement/Sprint1Documents/Board%20Screenshots/v2.png) <br> <br>  
-- End of The Sprint: ![3rd Version](ProjectManagement/Sprint1Documents/Board%20Screenshots/v3.png) <br> <br>
+- Initial Board: ![Initial Board](ProjectManagement/Sprint2Documents/Board%20Screenshots/1st%20version.png) <br> <br>  
+- 2nd Version: ![2nd Version](ProjectManagement/Sprint2Documents/Board%20Screenshots/2nd%20version.png) <br> <br>  
+- End of The Sprint: ![3rd Version](ProjectManagement/Sprint2Documents/Board%20Screenshots/3rd%20version.png) <br> <br>
 
 </details>
 
 <details>
 <summary> <strong> Product status screenshots </strong> </summary>
+  <details>
+  <summary> <strong> Level Design </strong> </summary>
   
-- Human Model: <br> ![Human](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model1.png) <br> <br>  
-- Monkey Model: <br> ![Monkey](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model2.png)) <br> <br>  
-- Rabbit Model: <br> ![Rabbit](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model3.png)) <br> <br>
-- Turtle Model: <br> ![Turtle](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model4.png) <br> <br>
-- Beaver Model: <br> ![Beaver](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model5.png) <br> <br>
-<br> <br>
-- In-game Screenshot-1: <br> ![ss1](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game1.png) <br> <br>
-- In-game Screenshot-2: <br> ![ss2](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game2.png) <br> <br>
-- In-game Screenshot-3: <br> ![ss3](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game3.png) <br> <br>
-
+  - **Level-1**: <br>   
+       ![Level1.1](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1.png) <br> <br>
+       ![Level1.2](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1-ingame1.png) <br> <br>
+       ![Level1.3](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1-ingame2.png) <br> <br> <br>      
+  - **Level-2**: <br>  
+       ![Level2.1](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2.png) <br> <br>
+       ![Level2.2](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2-ingame1.png) <br> <br>
+       ![Level2.3](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2-ingame2.png) <br> <br> <br>   
+  - **Level-3**: <br>  
+       ![Level3.1](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3.png) <br> <br>
+       ![Level3.2](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3-ingame1.png) <br> <br>
+       ![Level3.3](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3-ingame2.png) <br> <br> <br>   
+  </details>
 </details>
+
 
 <details> 
 <summary> <strong> Burndown Chart </strong> </summary>
   
-- Burndown Chart: <br> ![Burndown Chart](ProjectManagement/Sprint1Documents/BurndownChart.png) <br> <br>
+- Burndown Chart: <br> ![Burndown Chart](ProjectManagement/Sprint2Documents/BurndownChart.png) <br> <br>
 
 </details>
 
 - **The points estimated to be completed during the sprint**: 40 Points
 
-- **Point Completion Logic**: After successfully completing the last sprint, we have 80 points remaining to finish the entire project. Therefore, our goal for this sprint is to complete 40 points.
+- **Point Completion Logic**: After successfully completing the last sprint, we have 80 points remaining to finish the entire project. Therefore, our goal for this sprint is to complete 40 points (half of the remaining points).
   
-- **Daily Scrum**: We tried to hold the Daily Scrum meetings via voice on Discord, but since some team members were unavailable, we mainly communicated through messages on Discord and WhatsApp. 
- <br>
+- **Daily Scrum**: We tried to hold the Daily Scrum meetings via voice on Discord, but since some team members were unavailable, we mainly communicated through messages on Discord and WhatsApp. <br>
  [Meeting Screenshots](https://imgur.com/a/CDPMuYo)    
 
 - ### **Sprint Review**: 
