@@ -100,20 +100,49 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 
 # Sprint 2
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 
+<details> 
+<summary> <strong> Sprint board update screenshots </strong> </summary>
+  
+- Initial Board: ![Initial Board](ProjectManagement/Sprint1Documents/Board%20Screenshots/v1.png) <br> <br>  
+- 2nd Version: ![2nd Version](ProjectManagement/Sprint1Documents/Board%20Screenshots/v2.png) <br> <br>  
+- End of The Sprint: ![3rd Version](ProjectManagement/Sprint1Documents/Board%20Screenshots/v3.png) <br> <br>
 
-- **Daily Scrum**: <br>
+</details>
+
+<details>
+<summary> <strong> Product status screenshots </strong> </summary>
+  
+- Human Model: <br> ![Human](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model1.png) <br> <br>  
+- Monkey Model: <br> ![Monkey](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model2.png)) <br> <br>  
+- Rabbit Model: <br> ![Rabbit](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model3.png)) <br> <br>
+- Turtle Model: <br> ![Turtle](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model4.png) <br> <br>
+- Beaver Model: <br> ![Beaver](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model5.png) <br> <br>
+<br> <br>
+- In-game Screenshot-1: <br> ![ss1](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game1.png) <br> <br>
+- In-game Screenshot-2: <br> ![ss2](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game2.png) <br> <br>
+- In-game Screenshot-3: <br> ![ss3](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/In-game3.png) <br> <br>
+
+</details>
+
+<details> 
+<summary> <strong> Burndown Chart </strong> </summary>
+  
+- Burndown Chart: <br> ![Burndown Chart](ProjectManagement/Sprint1Documents/BurndownChart.png) <br> <br>
+
+</details>
+
+- **The points estimated to be completed during the sprint**: 40 Points
+
+- **Point Completion Logic**: After successfully completing the last sprint, we have 80 points remaining to finish the entire project. Therefore, our goal for this sprint is to complete 40 points.
+  
+- **Daily Scrum**: We tried to hold the Daily Scrum meetings via voice on Discord, but since some team members were unavailable, we mainly communicated through messages on Discord and WhatsApp. 
+ <br>
  [Meeting Screenshots](https://imgur.com/a/CDPMuYo)    
 
-- **Sprint board update**: Sprint board screenshotları: 
+- ### **Sprint Review**: 
 
 
-- **Ürün Durumu**: Ekran görüntüleri:
-
-- **Sprint Review**: 
-
-
-- **Sprint Retrospective:**
+- ### **Sprint Retrospective:**
 
 
 
