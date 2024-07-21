@@ -161,6 +161,7 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
     - Aybaran completed the necessary tasks related to the enemies, but due to issues with the GitHub repository, we were unable to fully integrate the changes into the project. Additionally, while trying to merge enemy related branch, we caused bugs in the player input system which caused more work for the mext sprint.
     - Even though we established the necessary mechanics' infrastructure in this sprint, we were unable to fully integrate the changes into the game. Therefore, our first goal for the next sprint will be to fully merge all the changes made.
     - In the final sprint, we plan to focus on features such as user interfaces, enhancing existing mechanics, and adding visual and sound effects as well as other artistic content.
+    - **Sprint Review Participants:** `Aziz Önder`, `Aybaran Yurtseven`, `Beyza Özkan`
       
 - ### **Sprint Retrospective:**
     - Although we decided to create fewer levels than initially planned, the most successful aspect of this sprint for everyone was the level design.
