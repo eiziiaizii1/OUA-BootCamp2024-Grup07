@@ -52,8 +52,8 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 <summary> <strong> Product status screenshots </strong> </summary>
   
 - Human Model: <br> ![Human](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model1.png) <br> <br>  
-- Monkey Model: <br> ![Monkey](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model2.png)) <br> <br>  
-- Rabbit Model: <br> ![Rabbit](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model3.png)) <br> <br>
+- Monkey Model: <br> ![Monkey](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model2.png) <br> <br>  
+- Rabbit Model: <br> ![Rabbit](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model3.png) <br> <br>
 - Turtle Model: <br> ![Turtle](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model4.png) <br> <br>
 - Beaver Model: <br> ![Beaver](ProjectManagement/Sprint1Documents/Product%20Status%20Pictures/model5.png) <br> <br>
 <br> <br>
@@ -111,22 +111,26 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 
 <details>
 <summary> <strong> Product status screenshots </strong> </summary>
-  <details>
-  <summary> <strong> Level Design </strong> </summary>
   
-  - **Level-1**: <br>   
-       ![Level1.1](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1.png) <br> <br>
-       ![Level1.2](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1-ingame1.png) <br> <br>
-       ![Level1.3](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1-ingame2.png) <br> <br> <br>      
-  - **Level-2**: <br>  
-       ![Level2.1](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2.png) <br> <br>
-       ![Level2.2](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2-ingame1.png) <br> <br>
-       ![Level2.3](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2-ingame2.png) <br> <br> <br>   
-  - **Level-3**: <br>  
-       ![Level3.1](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3.png) <br> <br>
-       ![Level3.2](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3-ingame1.png) <br> <br>
-       ![Level3.3](ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3-ingame2.png) <br> <br> <br>   
-  </details>
+- **Level Design:**
+  
+  - Level-1:   
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1.png" width="720"> <br>
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1-ingame1.png" width="720"> <br>
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl1-ingame2.png" width="720"> <br> <br>   
+  - Level-2:   
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2.png" width="720"> <br>
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2-ingame1.png" width="720"> <br>
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl2-ingame2.png" width="720"> <br> <br> 
+  - Level-3:   
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3.png" width="720"> <br>
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3-ingame1.png" width="720"> <br>
+       <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/lvl3-ingame2.png" width="720"> <br> <br> <br>   
+
+- **Firebase**
+  
+  <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/fb1.png" width="720"> <br>   
+  <img src="ProjectManagement/Sprint2Documents/Product%20Status%20Pictures/fb2.png" width="720"> <br> <br> 
 </details>
 
 
