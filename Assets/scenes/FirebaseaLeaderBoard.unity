@@ -2914,7 +2914,7 @@ MonoBehaviour:
   userProfilePanel: {fileID: 1924648414}
   leaderBoardPanel: {fileID: 1750430156}
   leaderBoardContent: {fileID: 57890724}
-  userDataPrefab: {fileID: 1884728339434274877, guid: fd9777f625ca7104e815074f1f568593, type: 3}
+  userDataPrefab: {fileID: 1884728339434274877, guid: 56ea80ef099fa5849939c7d319f597ec, type: 3}
   profileUsernameTxt: {fileID: 88409457}
   profileUserScoreTxt: {fileID: 1083754676}
   errorUsernameTxt: {fileID: 1739129233}

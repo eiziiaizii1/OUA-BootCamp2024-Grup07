@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638570971851918097
-    m_Hash: 3086641520
+      ticks: 638571060106968511
+    m_Hash: 3853187253
   m_LockFileStatus:
     m_FilePath: D:/UnityProjects/Bootcamp7/OUA-BootCamp2024-Grup07/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638570971852512148
-    m_Hash: 492365817
+      ticks: 638571060107140239
+    m_Hash: 402064749
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

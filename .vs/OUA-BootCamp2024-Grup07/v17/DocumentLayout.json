@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\firebaseleaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\firebaseleaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\unityprojects\\bootcamp7\\oua-bootcamp2024-grup07\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\userdataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\userdataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\firebaseleaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firebaseleaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\userdataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\userdataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +35,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Portal.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\Portal.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Portal.cs",
+              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\Portal.cs",
+              "RelativeToolTip": "Assets\\scripts\\Portal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T22:12:20.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScoreManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\ScoreManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ScoreManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\ScoreManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\ScoreManager.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAQwA0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T22:10:44.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserDataUI.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\Scripts\\UserDataUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UserDataUI.cs",
               "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\Scripts\\UserDataUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\UserDataUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T00:12:29.919Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FirebaseLeaderboardManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\Scripts\\FirebaseLeaderboardManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FirebaseLeaderboardManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\Scripts\\FirebaseLeaderboardManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FirebaseLeaderboardManager.cs",
-              "ViewState": "AQIAAM4AAAAAAAAAAADwvywAAAAdAAAA",
+              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\FirebaseLeaderboardManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\FirebaseLeaderboardManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\FirebaseLeaderboardManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\FirebaseLeaderboardManager.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAiwLYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T00:12:24.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T00:12:24.378Z"
             }
           ]
         }
