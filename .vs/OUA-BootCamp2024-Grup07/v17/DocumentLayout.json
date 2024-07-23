@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\unityprojects\\bootcamp7\\oua-bootcamp2024-grup07\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|d:\\unityprojects\\bootcamp7\\oua-bootcamp2024-grup07\\assets\\scripts\\firebasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firebasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|d:\\unityprojects\\bootcamp7\\oua-bootcamp2024-grup07\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\firebaseleaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firebaseleaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\assets\\scripts\\userdataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\userdataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|d:\\unityprojects\\bootcamp7\\oua-bootcamp2024-grup07\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60E8D72B-D963-ABE4-50E7-06A311E46E04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Portal.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\Portal.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\Portal.cs",
-              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\Portal.cs",
-              "RelativeToolTip": "Assets\\scripts\\Portal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "DocumentIndex": 2,
+              "Title": "Cube.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\Cube.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Cube.cs",
+              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\Cube.cs",
+              "RelativeToolTip": "Assets\\scripts\\Cube.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T22:12:20.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ScoreManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\ScoreManager.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ScoreManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\ScoreManager.cs",
-              "RelativeToolTip": "Assets\\scripts\\ScoreManager.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwA0AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T22:10:44.284Z",
+              "WhenOpened": "2024-07-20T23:39:10.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserDataUI.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\Scripts\\UserDataUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UserDataUI.cs",
-              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\Scripts\\UserDataUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UserDataUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA1AAAA",
+              "DocumentIndex": 0,
+              "Title": "FirebaseManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\FirebaseManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\FirebaseManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\FirebaseManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\FirebaseManager.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAkwJQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T00:12:29.919Z"
+              "WhenOpened": "2024-07-20T23:28:29.614Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FirebaseLeaderboardManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\FirebaseLeaderboardManager.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\FirebaseLeaderboardManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\FirebaseLeaderboardManager.cs",
-              "RelativeToolTip": "Assets\\scripts\\FirebaseLeaderboardManager.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAiwLYAAAApAAAA",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Bootcamp7\\OUA-BootCamp2024-Grup07\\Assets\\scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameManager.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCAAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T00:12:24.378Z"
+              "WhenOpened": "2024-07-20T23:20:16.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }
