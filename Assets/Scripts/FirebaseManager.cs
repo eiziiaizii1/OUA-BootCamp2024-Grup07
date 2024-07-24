@@ -75,6 +75,8 @@ public class FirebaseManager : MonoBehaviour
     public void SignInWithUsername()
     {
         StartCoroutine(CheckUserExistInDatabase());
+
+        OnNextLevelButtonClicked();
     }
 
     public void CloseLeaderboard()
@@ -153,7 +155,7 @@ public class FirebaseManager : MonoBehaviour
 
     public void OnNextLevelButtonClicked()
     {
-        SceneManager.LoadScene("NextLevel");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 

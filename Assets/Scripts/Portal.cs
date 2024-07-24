@@ -25,14 +25,24 @@ public class Portal : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        
+
         if (other.CompareTag("Player"))
         {
-            // Mevcut sahnenin build index'ini al
-           int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            // Bir sonraki sahneye geç
-           SceneManager.LoadScene(currentSceneIndex + 1);
-            PortaldanGecti = true;
+            GameManager scoreManager = FindObjectOfType<GameManager>();
+            if (scoreManager != null)
+            {
+                scoreManager.OnCubeCollected();
+            }
+
+            // TODO: WAIT FOR NEXT LEVEL INPUT
+
+
+
+           // // Mevcut sahnenin build index'ini al
+           // int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+           // // Bir sonraki sahneye geç
+           //SceneManager.LoadScene(currentSceneIndex + 1);
+           // PortaldanGecti = true;
         }
     }
 }
