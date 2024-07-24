@@ -1813,10 +1813,11 @@ GameObject:
   m_Component:
   - component: {fileID: 402234}
   - component: {fileID: 9568018}
-  - component: {fileID: 1439051403768910738}
-  - component: {fileID: 6038266772302966695}
-  - component: {fileID: 8199813897160419875}
-  - component: {fileID: 3940025369810312663}
+  - component: {fileID: 3119670426996035148}
+  - component: {fileID: 9121009207848998006}
+  - component: {fileID: 2770289715026134389}
+  - component: {fileID: 2983923296749284498}
+  - component: {fileID: 9032631750582460107}
   m_Layer: 0
   m_Name: Muscomorph_LEGACY
   m_TagString: Untagged
@@ -1834,7 +1835,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 447528}
@@ -1868,7 +1869,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!195 &1439051403768910738
+--- !u!114 &3119670426996035148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9ce5d19ce324648accaabfe6d9e1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  currentWaypoint: 0
+  isReversing: 0
+  player: {fileID: 0}
+  chaseDistance: 4
+  loseDistance: 1.5
+  patrolSpeed: 2.25
+  chaseSpeed: 3
+--- !u!195 &9121009207848998006
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1878,7 +1901,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1890,7 +1913,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!135 &6038266772302966695
+--- !u!135 &2770289715026134389
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1911,7 +1934,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 0.6, z: 0}
---- !u!54 &8199813897160419875
+--- !u!54 &2983923296749284498
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1938,7 +1961,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3940025369810312663
+--- !u!114 &9032631750582460107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1947,14 +1970,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 165782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34ed54fd00c29d047bb947631b1a5f18, type: 3}
+  m_Script: {fileID: 11500000, guid: ad9ce5d19ce324648accaabfe6d9e1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   currentWaypoint: 0
   isReversing: 0
+  player: {fileID: 0}
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 3
+  chaseSpeed: 5
 --- !u!1 &170074
 GameObject:
   m_ObjectHideFlags: 0

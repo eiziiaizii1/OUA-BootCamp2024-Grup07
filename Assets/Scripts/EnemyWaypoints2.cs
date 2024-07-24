@@ -17,8 +17,12 @@ public class EnemyWaypoints2 : MonoBehaviour
     public float patrolSpeed = 2.25f; // Speed while patrolling
     public float chaseSpeed = 3f; // Speed while chasing
 
+    private TurtleSkill invisiblityScript;
+
     private void Start()
     {
+        invisiblityScript = player.GetComponent<TurtleSkill>();
+
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.speed = patrolSpeed; // Set initial speed to patrol speed
         navMeshAgent.SetDestination(waypoints[0].position);
@@ -35,7 +39,7 @@ public class EnemyWaypoints2 : MonoBehaviour
             HandlePlayerLoss();
         }
             
-        if (distanceToPlayer <= chaseDistance)
+        if (distanceToPlayer <= chaseDistance && !invisiblityScript.isInvisible)
         {
             // Player is within chase distance, chase the player
             navMeshAgent.speed = chaseSpeed;

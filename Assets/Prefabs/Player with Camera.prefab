@@ -8196,7 +8196,7 @@ Transform:
   m_GameObject: {fileID: 7391865756163374085}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8999999, y: 1.375, z: -3.27}
+  m_LocalPosition: {x: -1.8999994, y: 1.375, z: -3.2700012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10418,6 +10418,7 @@ GameObject:
   - component: {fileID: 9109881343940862499}
   - component: {fileID: 6338204370827973276}
   - component: {fileID: 6743538598346219915}
+  - component: {fileID: 7433205646173373839}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -10619,8 +10620,8 @@ MonoBehaviour:
     avatar: {fileID: 9000000, guid: 5e604c30447f0694ba627ea306ff03b7, type: 3}
     animatorController: {fileID: 22100000, guid: ca867e2391c6cb34ab6adaf0cb9fa365, type: 2}
     properties:
-      MoveSpeed: 3
-      SprintSpeed: 5
+      MoveSpeed: 3.5
+      SprintSpeed: 7
       JumpHeight: 1.75
       Scale: {x: 0.65, y: 0.65, z: 0.65}
   - characterType: 4
@@ -10628,8 +10629,8 @@ MonoBehaviour:
     avatar: {fileID: 9000000, guid: d32f8e7e1ba08c64d893f61586da43bb, type: 3}
     animatorController: {fileID: 22100000, guid: ca867e2391c6cb34ab6adaf0cb9fa365, type: 2}
     properties:
-      MoveSpeed: 2.5
-      SprintSpeed: 4.5
+      MoveSpeed: 3
+      SprintSpeed: 6
       JumpHeight: 3
       Scale: {x: 1, y: 1, z: 1}
   transformationCooldown: 3
@@ -10732,6 +10733,23 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7433205646173373839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986347860180661777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02fb9a42ab63e04e9bb4b0318196103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisible: 0
+  visibleMaterial: {fileID: 2100000, guid: 95a0e91132a949647832f309bb638eec, type: 2}
+  invisibleMaterial: {fileID: 2100000, guid: d8fcebef901e91c418ef4df0af198fc5, type: 2}
+  invisibilityDuration: 12
+  invisibilityCooldown: 10
 --- !u!1 &9001950201299409900
 GameObject:
   m_ObjectHideFlags: 0
@@ -10791,7 +10809,7 @@ Transform:
   m_GameObject: {fileID: 9002625485102492027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8999999, y: 1.375, z: -3.27}
+  m_LocalPosition: {x: -1.8999994, y: 1.375, z: -3.2700012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
