@@ -42,13 +42,14 @@ public class ScoreManager : MonoBehaviour
             ortatxt.text = timerText.text;//ortayada yazsın demi abi he? :)
 
             Kontrol.PortaldanGecti = false;// bir sonraki portaldanda geçebilsin demi abi 
-
         }
-        if(Kontrol.PortaldanGecti == false)
-        {
-            falseyap();
 
-        }
+        // COMMENTED TEMPORARILY!!!!!!!!!! 
+        //if(Kontrol.PortaldanGecti == false)
+        //{
+        //    falseyap();
+
+        //}
     }
     void timeshits()
     {
@@ -87,6 +88,7 @@ public class ScoreManager : MonoBehaviour
         timetxt.SetActive(true);
         scoretxt.SetActive(true);
     }
+
     void falseyap()
     {
         GameOverText.SetActive(false);
