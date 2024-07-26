@@ -1083,7 +1083,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 8
   loseDistance: 2
   patrolSpeed: 5
   chaseSpeed: 6
@@ -12401,7 +12401,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 10
   loseDistance: 2
   patrolSpeed: 2
   chaseSpeed: 3
@@ -14665,9 +14665,9 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 8
   loseDistance: 2
-  patrolSpeed: 4
+  patrolSpeed: 6
   chaseSpeed: 5
 --- !u!95 &481973946
 Animator:
@@ -21302,9 +21302,9 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 8
   loseDistance: 2
-  patrolSpeed: 4
+  patrolSpeed: 6
   chaseSpeed: 5
 --- !u!95 &588257277
 Animator:
@@ -46624,7 +46624,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
+  chaseDistance: 8
   loseDistance: 2
   patrolSpeed: 5
   chaseSpeed: 6
@@ -48349,7 +48349,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
+  chaseDistance: 8
   loseDistance: 1.5
   patrolSpeed: 2.25
   chaseSpeed: 3
@@ -59137,10 +59137,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 8
   loseDistance: 2
-  patrolSpeed: 3
-  chaseSpeed: 4
+  patrolSpeed: 6
+  chaseSpeed: 5
 --- !u!95 &1690986717
 Animator:
   serializedVersion: 5
@@ -79170,7 +79170,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 10
   loseDistance: 2
   patrolSpeed: 2
   chaseSpeed: 3
@@ -86445,7 +86445,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 5
+  chaseDistance: 8
   loseDistance: 2
   patrolSpeed: 5
   chaseSpeed: 6
@@ -90809,7 +90809,7 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
+  chaseDistance: 8
   loseDistance: 3
   patrolSpeed: 5
   chaseSpeed: 6

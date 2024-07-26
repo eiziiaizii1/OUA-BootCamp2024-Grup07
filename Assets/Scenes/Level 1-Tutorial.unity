@@ -32142,7 +32142,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 69.81, y: 8.068028, z: -20.84}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6083124806415288031}
@@ -37083,10 +37083,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 959600869}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  chaseDistance: 10
+  loseDistance: 2
+  patrolSpeed: 3
+  chaseSpeed: 3.5
 --- !u!23 &5535773993568105858
 MeshRenderer:
   m_ObjectHideFlags: 0
