@@ -10419,6 +10419,7 @@ GameObject:
   - component: {fileID: 6338204370827973276}
   - component: {fileID: 6743538598346219915}
   - component: {fileID: 7433205646173373839}
+  - component: {fileID: 1565462909862517521}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -10750,6 +10751,19 @@ MonoBehaviour:
   invisibleMaterial: {fileID: 2100000, guid: d8fcebef901e91c418ef4df0af198fc5, type: 2}
   invisibilityDuration: 12
   invisibilityCooldown: 10
+--- !u!114 &1565462909862517521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986347860180661777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa0d75fdf64ff94bb9dc0119c8653eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPosition: {fileID: 0}
 --- !u!1 &9001950201299409900
 GameObject:
   m_ObjectHideFlags: 0

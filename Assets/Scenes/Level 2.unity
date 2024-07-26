@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 53398443}
   m_Layer: 0
   m_Name: EnemyBug2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,10 +1083,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 5
+  chaseSpeed: 6
 --- !u!95 &53398447
 Animator:
   serializedVersion: 5
@@ -1118,7 +1118,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 175.96, y: 0.25205612, z: 2.16}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1950319095}
@@ -12308,7 +12308,7 @@ GameObject:
   - component: {fileID: 382992018}
   m_Layer: 0
   m_Name: EnemyBug2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12401,9 +12401,9 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 2
   chaseSpeed: 3
 --- !u!95 &382992022
 Animator:
@@ -12436,7 +12436,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 71.7, y: 0.25205612, z: 15.22}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 870756814}
@@ -12449,6 +12449,37 @@ Transform:
   - {fileID: 1444297820}
   m_Father: {fileID: 1589952053}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &383009140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383009141}
+  m_Layer: 0
+  m_Name: Start Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &383009141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383009140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.127, y: 0.36, z: 9.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &385621282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464102, guid: 10b4213a276bd0f4d93c345fd1420858, type: 3}
@@ -14541,7 +14572,7 @@ GameObject:
   - component: {fileID: 481973942}
   m_Layer: 0
   m_Name: EnemyBug4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14634,10 +14665,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 4
+  chaseSpeed: 5
 --- !u!95 &481973946
 Animator:
   serializedVersion: 5
@@ -14669,7 +14700,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 80.35, y: 0.25205612, z: 13.54}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1550827875}
@@ -21175,7 +21206,7 @@ GameObject:
   - component: {fileID: 588257273}
   m_Layer: 0
   m_Name: EnemyBug3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21271,10 +21302,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 4
+  chaseSpeed: 5
 --- !u!95 &588257277
 Animator:
   serializedVersion: 5
@@ -21306,7 +21337,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 80.79, y: 0.25205612, z: 1.8}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 870648459}
@@ -29042,6 +29073,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.270001
       objectReference: {fileID: 0}
+    - target: {fileID: 1565462909862517521, guid: 6bc780259909d654387dfdbe7cc449bd, type: 3}
+      propertyPath: respawnPosition
+      value: 
+      objectReference: {fileID: 383009141}
     - target: {fileID: 3486638294270288740, guid: 6bc780259909d654387dfdbe7cc449bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9000008
@@ -46496,7 +46531,7 @@ GameObject:
   - component: {fileID: 1280919478}
   m_Layer: 0
   m_Name: EnemyBug2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46590,9 +46625,9 @@ MonoBehaviour:
   isReversing: 0
   player: {fileID: 926542310}
   chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  loseDistance: 2
+  patrolSpeed: 5
+  chaseSpeed: 6
 --- !u!95 &1280919482
 Animator:
   serializedVersion: 5
@@ -48221,7 +48256,7 @@ GameObject:
   - component: {fileID: 1357604008}
   m_Layer: 0
   m_Name: EnemyBug1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48349,7 +48384,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 127.25, y: 0.25215626, z: 5.12}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1718141893}
@@ -59007,7 +59042,7 @@ GameObject:
   - component: {fileID: 1690986713}
   m_Layer: 0
   m_Name: EnemyBug5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59102,10 +59137,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 3
+  chaseSpeed: 4
 --- !u!95 &1690986717
 Animator:
   serializedVersion: 5
@@ -59137,7 +59172,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.86602545, z: -0, w: 0.49999994}
   m_LocalPosition: {x: 96.02, y: 0.25205612, z: 12.69}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 790181571}
@@ -78972,7 +79007,7 @@ GameObject:
   - component: {fileID: 4770601873398662770}
   m_Layer: 0
   m_Name: EnemyBug3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79135,9 +79170,9 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 2
   chaseSpeed: 3
 --- !u!4 &1391632587112453317
 Transform:
@@ -86410,10 +86445,10 @@ MonoBehaviour:
   currentWaypoint: 0
   isReversing: 0
   player: {fileID: 926542310}
-  chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  chaseDistance: 5
+  loseDistance: 2
+  patrolSpeed: 5
+  chaseSpeed: 6
 --- !u!1 &2806394208451699042
 GameObject:
   m_ObjectHideFlags: 0
@@ -89657,7 +89692,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 65, y: 0.25205612, z: 3.56}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 772386067211359317}
@@ -90280,7 +90315,7 @@ Transform:
   m_GameObject: {fileID: 2050174822617015710}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 145, y: 0.25215626, z: 16.6}
+  m_LocalPosition: {x: 145, y: 0.25215626, z: 15.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90340,7 +90375,7 @@ Transform:
   m_GameObject: {fileID: 2050174823537008206}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 145, y: 0.25215626, z: 2.1888952}
+  m_LocalPosition: {x: 145, y: 0.25215626, z: 1.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90775,9 +90810,9 @@ MonoBehaviour:
   isReversing: 0
   player: {fileID: 926542310}
   chaseDistance: 4
-  loseDistance: 1.5
-  patrolSpeed: 2.25
-  chaseSpeed: 3
+  loseDistance: 3
+  patrolSpeed: 5
+  chaseSpeed: 6
 --- !u!4 &6372987201993077162
 Transform:
   m_ObjectHideFlags: 0
@@ -90996,7 +91031,7 @@ GameObject:
   - component: {fileID: 617871145258187824}
   m_Layer: 0
   m_Name: EnemyBug1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92362,7 +92397,7 @@ GameObject:
   - component: {fileID: 4376363313804292865}
   m_Layer: 0
   m_Name: EnemyBug1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93057,7 +93092,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 188.62, y: 0.25205612, z: 17.38}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4508376723683859300}
@@ -93530,6 +93565,7 @@ SceneRoots:
   - {fileID: 740811977}
   - {fileID: 229532302}
   - {fileID: 926542309}
+  - {fileID: 383009141}
   - {fileID: 1358751427}
   - {fileID: 1565078392}
   - {fileID: 1589952053}
