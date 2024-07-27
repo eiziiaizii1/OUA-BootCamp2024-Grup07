@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/mainMenuScene.unity
+    guid: 20b6f9c6bd9ac4048ab09df73bdf139f
+  - enabled: 1
+    path: Assets/Scenes/scoresave.unity
+    guid: e36686b1f94a17647b744bb5b2e23d9f
+  - enabled: 1
     path: Assets/Scenes/TempMainMenu.unity
     guid: afe625a90af9312458476ae0a8eafb14
   - enabled: 1

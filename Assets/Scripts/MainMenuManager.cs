@@ -5,11 +5,10 @@ using Firebase.Database;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class FirebaseManager : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
-    public static FirebaseManager Instance;
+    public static MainMenuManager Instance;
 
-    public GameManager gameManager;
 
     public GameObject usernamePanel, userProfilePanel, leaderBoardPanel, leaderBoardContent, userDataPrefab;
     public TMP_Text profileUsernameTxt, profileUserScoreTxt, errorUsernameTxt;
@@ -159,15 +158,6 @@ public class FirebaseManager : MonoBehaviour
         usernamePanel.SetActive(false);
         userProfilePanel.SetActive(false);
         leaderBoardPanel.SetActive(false);
-
-        if (gameManager != null)
-        {
-            gameManager.StartGame();
-        }
-        else
-        {
-            Debug.LogError("GameManager instance is not assigned.");
-        }
     }
 
     public void OnNextLevelButtonClicked()
@@ -284,16 +274,5 @@ public class FirebaseManager : MonoBehaviour
             }
         }
     }
-}
 
-public class LeaderboardData1
-{
-    public string username;
-    public int score;
-
-    public LeaderboardData1(string username, int score)
-    {
-        this.username = username;
-        this.score = score;
-    }
 }

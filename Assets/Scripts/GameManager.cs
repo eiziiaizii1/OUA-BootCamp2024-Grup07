@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         FirebaseManager.Instance.StartCoroutine(FirebaseManager.Instance.UpdateUserScore(score));
 
         // Skor ve diðer panelleri yönet
-        leaderBoardPanel.SetActive(false); // Skor panelini aktif et
-        userProfilePanel.SetActive(true); // Profil panelini kapalý tut
+        leaderBoardPanel.SetActive(false); 
+        userProfilePanel.SetActive(true); 
     }
 }
