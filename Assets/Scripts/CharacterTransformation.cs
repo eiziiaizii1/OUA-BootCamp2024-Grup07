@@ -70,9 +70,22 @@ public class CharacterTransformation : MonoBehaviour
 
     private void CheckCharacterSwitchInput()
     {
-        if (Input.inputString.Length > 0 && int.TryParse(Input.inputString, out int index))
+        //if (Input.inputString.Length > 0 && int.TryParse(Input.inputString, out int index))
+        //{
+        //    SwitchCharacter(index);
+        //}
+        
+        int totalCharacterNum = characterConfigs.Length;
+        for (int i = 1; i < totalCharacterNum; i++)
         {
-            SwitchCharacter(index);
+            if (Input.GetKeyDown(i.ToString()))
+            {
+                SwitchCharacter(i);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SwitchCharacter(0);
         }
     }
 }
