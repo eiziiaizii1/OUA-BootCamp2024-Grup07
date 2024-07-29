@@ -81,6 +81,7 @@ public class CharacterTransformation : MonoBehaviour
             if (Input.GetKeyDown(i.ToString()))
             {
                 SwitchCharacter(i);
+                return;
             }
         }
         if (Input.GetKeyDown(KeyCode.R))
