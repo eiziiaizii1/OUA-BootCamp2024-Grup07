@@ -11,10 +11,11 @@ public class TurtleSkill : MonoBehaviour
     private SkinnedMeshRenderer skinnedMeshRenderer;
     private Transform turtleObject;
 
-
     [SerializeField] float invisibilityDuration = 10f;
     [SerializeField] float invisibilityCooldown = 10f;
     private float nextInvisiblityTime = 0f;
+
+    private Coroutine invisibilityCoroutine;
 
     void Start()
     {
@@ -27,8 +28,12 @@ public class TurtleSkill : MonoBehaviour
     {
         if (turtleObject.gameObject.activeInHierarchy && Time.time > nextInvisiblityTime && Input.GetKeyDown(KeyCode.C))
         {
-            nextInvisiblityTime = invisibilityDuration + invisibilityCooldown + Time.time;
+            nextInvisiblityTime = Time.time + invisibilityDuration + invisibilityCooldown;
             BecomeInvisible();
+        }
+        if (!turtleObject.gameObject.activeInHierarchy && isInvisible)
+        {
+            RevertVisibility();
         }
     }
 
@@ -36,12 +41,22 @@ public class TurtleSkill : MonoBehaviour
     {
         isInvisible = true;
         skinnedMeshRenderer.material = invisibleMaterial;
-        StartCoroutine(RevertVisibilityAfterDelay());
+        invisibilityCoroutine = StartCoroutine(RevertVisibilityAfterDelay());
     }
 
     IEnumerator RevertVisibilityAfterDelay()
     {
         yield return new WaitForSeconds(invisibilityDuration);
+        RevertVisibility();
+    }
+
+    void RevertVisibility()
+    {
+        if (invisibilityCoroutine != null)
+        {
+            StopCoroutine(invisibilityCoroutine);
+            invisibilityCoroutine = null;
+        }
         skinnedMeshRenderer.material = visibleMaterial;
         isInvisible = false;
     }
