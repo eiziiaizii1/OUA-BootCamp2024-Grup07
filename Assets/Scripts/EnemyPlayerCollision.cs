@@ -6,11 +6,11 @@ public class EnemyPlayerCollision : MonoBehaviour
 {
     [SerializeField] Transform respawnPosition;
 
-
-    private void OnCollisionEnter(Collision collision)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (hit.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Collision with Enemy detected");
             gameObject.transform.position = respawnPosition.position;
         }
     }
