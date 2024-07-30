@@ -23,6 +23,13 @@ public class Portal : MonoBehaviour
     {
         
     }
+
+    public void LevelPassed()
+    {
+        PlayerPrefs.SetInt("LastCompletedLevel", 1);
+        PlayerPrefs.Save();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         
@@ -30,8 +37,9 @@ public class Portal : MonoBehaviour
         {
             // Mevcut sahnenin build index'ini al
            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            LevelPassed();
             // Bir sonraki sahneye geç
-           SceneManager.LoadScene(currentSceneIndex + 1);
+            SceneManager.LoadScene(currentSceneIndex + 1);
             PortaldanGecti = true;
         }
     }

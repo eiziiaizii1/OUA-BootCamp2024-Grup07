@@ -42,4 +42,7 @@ public class GameManager : MonoBehaviour
         leaderBoardPanel.SetActive(false); // Skor panelini aktif et
         userProfilePanel.SetActive(true); // Profil panelini kapalý tut
     }
+
+
+
 }
