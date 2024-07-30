@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using StarterAssets;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     private float startTime;
     private bool isTimerRunning;
     private int score;
+
 
     void Start()
     {
@@ -40,6 +42,6 @@ public class GameManager : MonoBehaviour
 
         // Skor ve diðer panelleri yönet
         leaderBoardPanel.SetActive(false); 
-        userProfilePanel.SetActive(true); 
+        userProfilePanel.SetActive(true);
     }
 }

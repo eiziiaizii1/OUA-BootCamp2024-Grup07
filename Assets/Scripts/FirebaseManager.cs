@@ -4,6 +4,7 @@ using UnityEngine;
 using Firebase.Database;
 using TMPro;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class FirebaseManager : MonoBehaviour
 {
@@ -169,6 +170,7 @@ public class FirebaseManager : MonoBehaviour
         usernamePanel.SetActive(false);
         userProfilePanel.SetActive(false);
         leaderBoardPanel.SetActive(false);
+
 
         if (gameManager != null)
         {
