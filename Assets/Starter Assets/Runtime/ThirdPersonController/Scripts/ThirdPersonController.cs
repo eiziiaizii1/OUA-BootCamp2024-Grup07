@@ -563,7 +563,7 @@ namespace StarterAssets
             GroundedOffset = originalGroundedOffset * scale.x;
 
 
-            SpeedChangeRate = originalSpeedChangeRate * scale.x;
+            //SpeedChangeRate = originalSpeedChangeRate * scale.x;
             FootstepAudioVolume = originalFootstepAudioVolume * scale.x;
             JumpTimeout = originalJumpTimeout * scale.z;
             FallTimeout = originalFallTimeout * scale.z;
