@@ -61,6 +61,7 @@ public class MovingPlatform : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.parent = null;
+            other.transform.localScale = Vector3.one;
         }
     }
 }
