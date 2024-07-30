@@ -27526,8 +27526,6 @@ MonoBehaviour:
   openYPosition: 19
   speed: 2
   cardObject: {fileID: 4499272717563859633}
-  interactText: {fileID: 0}
-  getthecard: {fileID: 0}
   player: {fileID: 5268445689383127462}
   interactDistance: 3
 --- !u!65 &1971656384

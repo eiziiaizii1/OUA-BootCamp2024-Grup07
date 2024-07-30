@@ -11,8 +11,8 @@ public class Door : MonoBehaviour
     public float speed = 2f;  // Kapının açılma hızı
     private Card cardCollect;
     public GameObject cardObject;
-    public TMP_Text interactText; // UI Text elemanı
-    public TMP_Text getthecard; // UI Text elemanı
+    //public TMP_Text interactText; // UI Text elemanı
+    //public TMP_Text getthecard; // UI Text elemanı
     public Transform player; // Oyuncu objesi
     public float interactDistance = 3f; // Etkileşim mesafesi
 
@@ -26,8 +26,8 @@ public class Door : MonoBehaviour
     void Start()
     {
         cardCollect = cardObject.GetComponent<Card>();
-        interactText.gameObject.SetActive(false); // Başlangıçta yazıyı gizle
-        getthecard.gameObject.SetActive(false);
+        //interactText.gameObject.SetActive(false); // Başlangıçta yazıyı gizle
+        //getthecard.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -62,8 +62,8 @@ public class Door : MonoBehaviour
         {
             if (cardCollect.IsCardCollected())
             {
-                interactText.gameObject.SetActive(true); // Kart toplandıysa "Press E to open the door" yazısını göster
-                getthecard.gameObject.SetActive(false); // "Get the card" yazısını gizle
+                //interactText.gameObject.SetActive(true); // Kart toplandıysa "Press E to open the door" yazısını göster
+                //getthecard.gameObject.SetActive(false); // "Get the card" yazısını gizle
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -75,20 +75,20 @@ public class Door : MonoBehaviour
                     {
                         // Kapıyı açma sürecini başlat
                         shouldOpen = true;
-                        interactText.gameObject.SetActive(false); // E'ye basınca yazıyı gizle
+                        //interactText.gameObject.SetActive(false); // E'ye basınca yazıyı gizle
                     }
                 }
             }
             else
             {
-                getthecard.gameObject.SetActive(true); // Kart toplanmadıysa "Get the card" yazısını göster
-                interactText.gameObject.SetActive(false); // "Press E to open the door" yazısını gizle
+                //getthecard.gameObject.SetActive(true); // Kart toplanmadıysa "Get the card" yazısını göster
+                //interactText.gameObject.SetActive(false); // "Press E to open the door" yazısını gizle
             }
         }
         else
         {
-            interactText.gameObject.SetActive(false); // Mesafe uygun değilse yazıları gizle
-            getthecard.gameObject.SetActive(false);
+            //interactText.gameObject.SetActive(false); // Mesafe uygun değilse yazıları gizle
+            //getthecard.gameObject.SetActive(false);
         }
 
         if (shouldOpen)
