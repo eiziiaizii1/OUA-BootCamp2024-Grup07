@@ -28,13 +28,19 @@ public class Portal1 : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
+            GameManager scoreManager = FindObjectOfType<GameManager>();
+            if (scoreManager != null)
+            {
+                scoreManager.OnCubeCollected();
+            }
+
             // Mevcut sahnenin build index'ini al
-           int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            //int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
             LevelPassed();
 
             // Bir sonraki sahneye geç
-           SceneManager.LoadScene(currentSceneIndex + 1);
+            //SceneManager.LoadScene(currentSceneIndex + 1);
             PortaldanGecti = true;
 
         }
@@ -43,6 +49,5 @@ public class Portal1 : MonoBehaviour
     {
         PlayerPrefs.SetInt("LastCompletedLevel", 2);
         PlayerPrefs.Save();
-        
     }
 }

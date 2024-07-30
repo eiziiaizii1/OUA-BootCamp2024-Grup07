@@ -36,10 +36,10 @@ public class Portal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Mevcut sahnenin build index'ini al
-           int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            //int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             LevelPassed();
             // Bir sonraki sahneye geç
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            //SceneManager.LoadScene(currentSceneIndex + 1);
             PortaldanGecti = true;
             GameManager scoreManager = FindObjectOfType<GameManager>();
             if (scoreManager != null)

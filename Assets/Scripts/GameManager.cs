@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using StarterAssets;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class GameManager : MonoBehaviour
     private bool isTimerRunning;
     private int score;
 
+    private StarterAssetsInputs gameInputs;
+    private PlayerInput playerInput;
 
     void Start()
     {
         StartGame();
+        gameInputs = player.GetComponent<StarterAssetsInputs>();
+        playerInput = player.GetComponent<PlayerInput>();   
     }
 
     void Update()
@@ -43,6 +48,10 @@ public class GameManager : MonoBehaviour
         // Skor ve diðer panelleri yönet
         leaderBoardPanel.SetActive(false); 
         userProfilePanel.SetActive(true);
+
+        gameInputs.cursorInputForLook = false;
+        gameInputs.cursorLocked = false;
+        playerInput.enabled = false;
     }
 
 
