@@ -82,6 +82,16 @@ public class FirebaseManager : MonoBehaviour
         StartCoroutine(CheckUserExistInDatabase(onSuccess));
     }
 
+    public void SignInWithUsernameButton()
+    {
+        SignInWithUsername(OnSignInSuccess);
+    }
+    void OnSignInSuccess()
+    {
+        // Baþarýlý giriþ durumunda yapýlacak iþlemler
+        Debug.Log("Baþarýlý giriþ yapýldý");
+    }
+
     public void CloseLeaderboard()
     {
         if (leaderBoardContent.transform.childCount > 0)
