@@ -403,6 +403,9 @@ namespace StarterAssets
                         _animator.SetFloat("ClimbSpeed", 0.0f);
                     }
                 }
+            }else if (isClimbing && _currentCharacterType != CharacterType.Monkey)
+            {
+                DropLadder();
             }
 
             // Move the player

@@ -25,16 +25,30 @@ public class CharacterTransformation : MonoBehaviour
     private int currentIndex;
     [SerializeField] GameObject currentChild;
 
+    [SerializeField] GameObject vfxPrefab;
+    [SerializeField] GameObject vfxChild;
+    private Transform playerTransform;
+    private CharacterController characterController;
+    private Quaternion initialVFXRotation;
+
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         animator = GetComponent<Animator>();
         //SetCharacter(0); // Default is Human
+
+        playerTransform = gameObject.transform;
+        characterController = GetComponent<CharacterController>();
     }
 
     private void Update()
     {
         CheckCharacterSwitchInput();
+
+        if (vfxChild != null)
+        {
+            vfxChild.transform.rotation = initialVFXRotation;
+        }
     }
 
     public void SwitchCharacter(int index)
@@ -43,6 +57,7 @@ public class CharacterTransformation : MonoBehaviour
         {
             SetCharacter(index);
             nextTransformationTime = Time.time + transformationCooldown;
+            PlayVFX();
         }
         else
         {
@@ -84,4 +99,25 @@ public class CharacterTransformation : MonoBehaviour
             SwitchCharacter(0);
         }
     }
+
+    void PlayVFX()
+    {
+        if (vfxPrefab != null && playerTransform != null)
+        {
+            if (vfxChild != null)
+            {
+                Destroy(vfxChild);
+            }
+            Vector3 vfxPosition = new Vector3(
+                playerTransform.position.x,
+                playerTransform.position.y + (characterController.height / 2f),
+                playerTransform.position.z);
+
+            vfxChild = Instantiate(vfxPrefab, vfxPosition, playerTransform.rotation);
+            vfxChild.transform.SetParent(playerTransform);
+
+            initialVFXRotation = vfxChild.transform.rotation;
+        }
+    }
+
 }

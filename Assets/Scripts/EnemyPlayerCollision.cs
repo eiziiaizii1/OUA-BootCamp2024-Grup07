@@ -20,8 +20,8 @@ public class EnemyPlayerCollision : MonoBehaviour
             if (hit.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("Collision with Enemy detected");
-                gameObject.transform.position = respawnPosition.position;
-                gameObject.transform.rotation = initialRotation;
+                transform.position = respawnPosition.position;
+                //transform.rotation = initialRotation;
             }
     }
 }
