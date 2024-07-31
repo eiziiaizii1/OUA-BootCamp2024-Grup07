@@ -34,7 +34,18 @@ public class FirebaseManager : MonoBehaviour
 
     void Start()
     {
+        //// PlayerPrefs'i temizle
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.Save();
+
         FirebaseInitialize();
+
+        // Sahne yüklendiðinde kullanýcý adý ve skoru çekin
+        if (PlayerPrefs.HasKey("PlayerID"))
+        {
+            int playerID = PlayerPrefs.GetInt("PlayerID");
+            StartCoroutine(FetchUserProfileData(playerID));
+        }
     }
 
     void FirebaseInitialize()
@@ -48,6 +59,11 @@ public class FirebaseManager : MonoBehaviour
             StartCoroutine(FetchUserProfileData(playerID));
         }
         //StartCoroutine(FetchUserProfileData(PlayerPrefs.GetInt("PlayerID")));
+    }
+
+    public DatabaseReference GetDatabaseReference()
+    {
+        return db;
     }
 
     void HandleChildAdded(object sender, ChildChangedEventArgs args)
@@ -69,7 +85,7 @@ public class FirebaseManager : MonoBehaviour
                 return;
             }
             totalUsers = int.Parse(e2.Snapshot.ChildrenCount.ToString());
-            Debug.LogError("Total users: " + totalUsers);
+            //Debug.LogError("Total users: " + totalUsers);
         };
     }
 
@@ -139,12 +155,15 @@ public class FirebaseManager : MonoBehaviour
                     int playerID = int.Parse(childSnapshot.Key.Replace("User_", ""));
                     PlayerPrefs.SetInt("PlayerID", playerID);
                     PlayerPrefs.SetString("Username", usernameinput.text);
+                    PlayerPrefs.Save();
+                    Debug.Log("PlayerID and Username saved to PlayerPrefs: " + playerID + ", " + usernameinput.text);
                     StartCoroutine(FetchUserProfileData(playerID));
 
                     onSuccess?.Invoke(); // Giriþ baþarýlýysa callback çaðrýlýr
 
                     // Start game and switch panels
                     StartGame();
+                    OnNextLevelButtonClicked();
                     yield break;
                 }
             }
@@ -154,6 +173,8 @@ public class FirebaseManager : MonoBehaviour
                 PushUserData();
                 PlayerPrefs.SetInt("PlayerID", totalUsers + 1);
                 PlayerPrefs.SetString("Username", usernameinput.text);
+                PlayerPrefs.Save();
+                Debug.Log("PlayerID and Username saved to PlayerPrefs: " + (totalUsers + 1) + ", " + usernameinput.text);
                 //StartCoroutine(delayFetchProfile());
                 StartCoroutine(FetchUserProfileData(totalUsers + 1));
 
@@ -161,6 +182,7 @@ public class FirebaseManager : MonoBehaviour
 
                 // Start game and switch panels
                 StartGame();
+                OnNextLevelButtonClicked();
             }
         }
     }
@@ -280,7 +302,7 @@ public class FirebaseManager : MonoBehaviour
     public IEnumerator UpdateUserScore(int newScore)
     {
         int playerID = PlayerPrefs.GetInt("PlayerID");
-        if (playerID != 0)
+        if (playerID != -1)
         {
             var task = db.Child("User_" + playerID.ToString()).Child("score").SetValueAsync(newScore);
             yield return new WaitUntil(() => task.IsCompleted);
