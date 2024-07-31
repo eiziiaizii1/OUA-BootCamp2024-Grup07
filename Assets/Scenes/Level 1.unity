@@ -3332,6 +3332,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.2700012
       objectReference: {fileID: 0}
+    - target: {fileID: 1565462909862517521, guid: 6bc780259909d654387dfdbe7cc449bd, type: 3}
+      propertyPath: respawnPosition
+      value: 
+      objectReference: {fileID: 2073018968}
     - target: {fileID: 3486638294270288740, guid: 6bc780259909d654387dfdbe7cc449bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8999994
@@ -18045,8 +18049,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 96f996a3e7bedd047bf2164563b799e0, type: 2}
-  m_sharedMaterial: {fileID: -5457229091959032314, guid: 96f996a3e7bedd047bf2164563b799e0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33856,7 +33860,7 @@ MonoBehaviour:
   player: {fileID: 216445556}
   scoreText: {fileID: 1956179880}
   timerText: {fileID: 1324797483}
-  profileUserScoreTxt: {fileID: 2138615606}
+  profileUserScoreTxt: {fileID: 0}
 --- !u!1 &5361886641811220907
 GameObject:
   m_ObjectHideFlags: 0

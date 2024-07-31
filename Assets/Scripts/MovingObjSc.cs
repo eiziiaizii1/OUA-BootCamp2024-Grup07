@@ -42,6 +42,7 @@ public class MovingObjSc : MonoBehaviour
         if (other.gameObject == player)
         {
             player.transform.parent = null;
+            other.transform.localScale = Vector3.one;
         }
     }
 

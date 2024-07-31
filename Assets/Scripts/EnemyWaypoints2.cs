@@ -91,6 +91,6 @@ public class EnemyWaypoints2 : MonoBehaviour
 
     private void HandlePlayerLoss()
     {
-        Debug.Log("Player has been caught by the enemy!");
+        Debug.Log("AAAAAAAAAAAAA Player has been caught by the enemy!");
     }
 }
