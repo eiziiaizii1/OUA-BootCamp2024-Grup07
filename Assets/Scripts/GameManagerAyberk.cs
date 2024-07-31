@@ -20,7 +20,7 @@ public class GameManagerAyberk : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MenuFirebase");
+            SceneManager.LoadScene("Menu");
         }
     }
     public void ResetPrefs()
