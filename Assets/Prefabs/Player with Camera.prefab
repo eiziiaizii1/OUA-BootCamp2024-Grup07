@@ -10636,6 +10636,8 @@ MonoBehaviour:
       Scale: {x: 1, y: 1, z: 1}
   transformationCooldown: 3
   currentChild: {fileID: 2457010717668408215}
+  vfxPrefab: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
+  vfxChild: {fileID: 0}
 --- !u!114 &6743538598346219915
 MonoBehaviour:
   m_ObjectHideFlags: 0

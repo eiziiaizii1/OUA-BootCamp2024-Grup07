@@ -3384,10 +3384,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player with Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 6338204370827973276, guid: 6bc780259909d654387dfdbe7cc449bd, type: 3}
-      propertyPath: vfxPrefab
-      value: 
-      objectReference: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
