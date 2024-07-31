@@ -50,7 +50,7 @@ public class FirebaseManager : MonoBehaviour
 
     void FirebaseInitialize()
     {
-        db = FirebaseDatabase.DefaultInstance.GetReference("/Leaderboard/");
+        db = FirebaseDatabase.DefaultInstance.GetReference("/Leaderboard1/");
         db.ChildAdded += HandleChildAdded;
         GetTotalUsers();
         int playerID = PlayerPrefs.GetInt("PlayerID", -1);
