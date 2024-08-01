@@ -201,7 +201,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -232,7 +232,14 @@ namespace StarterAssets
             originalSlopeLimit = _controller.slopeLimit;
             originalStepOffset = _controller.stepOffset;
             originalSkinWidth = _controller.skinWidth;
+            // Fare imlecini gizler
+            UnityEngine.Cursor.visible = false;
+
+            // Fare imlecini ekranın ortasına kilitler
+            UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         }
+    
+   
 
         private void Update()
         {
