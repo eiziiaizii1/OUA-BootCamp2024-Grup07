@@ -225,10 +225,19 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
  [Meeting Screenshots](https://imgur.com/a/Ov0VZCw)    
 
 - ### **Sprint Review**:
-    - 
+    - We couldn't achieve our targeted points for this sprint due to everyone's individual commitments and busyness.
+    - Aziz mainly focused on new turtle mechanics, bug fixing-enhancements, and helps others combine the different features in the project. He also generated comic like images to add begining cinematic, but this feature was not added to final version of the game.
+    - Ayberk designed and implemented menus and progression saving, but due to GitHub errors caused by connection issues and his summer school schedule, he couldn't participate fully.
+    - Since Aybaran worked on NavMesh, he assisted with the alien placement part and researched suitable sound effects, but there wasn't enough time to add them. At the end of the sprint, he took on the task of making the game introduction video.
+    - Beyza added the in-game UI and integrated the Firebase system into each level. The database-related features caused unexpected bugs, so it took longer than expected. She also added tutorial instructions and contributed to adding comic-like cinematics to the beginning of the game; however, we couldn't include this feature in the final version of our game.
+    - Simay was able to join our group only in the last week due to issues she had with the academy and our inability to communicate with her. She tried to help as much as she could by taking on tasks related to lighting, level design, and other missing duties.
+    - Even though we managed to complete most of the features we aimed for, the incomplete state of the added features hindered our progress, resulting in us including features that fell short of our desired standard.
       
 - ### **Sprint Retrospective:**
-    - 
+    - The issues we faced during this sprint were the inability to focus on the project due to personal reasons and not completing the tasks fully.
+    - As before, we encountered GitHub issues again. Although we resolved most of these issues quickly, we couldn't fix the GitHub problem Ayberk faced, which slowed our progress.
+    - Although Simay's late involvement positively impacted the project, taking on too many tasks led to changes in the project flow, requiring us to revisit certain aspects.
+    - Overall, we are satisfied with the collaboration we established as a team. However, if we had been more perfectionistic with the features we added, we could have resolved some processes more smoothly.
 
 <br>
 
