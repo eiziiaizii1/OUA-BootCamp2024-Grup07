@@ -10507,7 +10507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseSensitivity: 2
+  MouseSensitivity: 5
   MoveSpeed: 2
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
@@ -10613,8 +10613,8 @@ MonoBehaviour:
     avatar: {fileID: 9000000, guid: d17682da1c8de2b408e0e6d0f67bff32, type: 3}
     animatorController: {fileID: 22100000, guid: 211a8eceb6e7a7a4db754dc8f4943b1f, type: 2}
     properties:
-      MoveSpeed: 0.75
-      SprintSpeed: 1
+      MoveSpeed: 1
+      SprintSpeed: 2
       JumpHeight: 0.2
       Scale: {x: 0.4, y: 0.4, z: 0.4}
   - characterType: 3

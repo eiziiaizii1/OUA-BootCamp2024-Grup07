@@ -15842,6 +15842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.2
   frequency: 5
+  canOpen: 0
 --- !u!23 &1716005507
 MeshRenderer:
   m_ObjectHideFlags: 0
