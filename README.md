@@ -178,9 +178,9 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
 <details> 
 <summary> <strong> Sprint board update screenshots </strong> </summary>
   
-- Initial Board: ![Initial Board](ProjectManagement/Sprint2Documents/Board%20Screenshots/1st%20version.png) <br> <br>  
-- 2nd Version: ![2nd Version](ProjectManagement/Sprint2Documents/Board%20Screenshots/2nd%20version.png) <br> <br>  
-- End of The Sprint: ![3rd Version](ProjectManagement/Sprint2Documents/Board%20Screenshots/3rd%20version.png) <br> <br>
+- Initial Board: ![Initial Board](ProjectManagement/Sprint3Documents/Board%20Screenshots/BoardV1.png) <br> <br>  
+- 2nd Version: ![2nd Version](ProjectManagement/Sprint3Documents/Board%20Screenshots/BoardV2.png) <br> <br>  
+- End of The Sprint: ![3rd Version](ProjectManagement/Sprint3Documents/Board%20Screenshots/BoardV3.png) <br> <br>
 
 </details>
 
