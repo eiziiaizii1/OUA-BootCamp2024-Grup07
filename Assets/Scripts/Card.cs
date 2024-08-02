@@ -12,7 +12,7 @@ public class Card : MonoBehaviour
 
 
     //public Door doorController;
-    bool canOpen = false;
+    public bool canOpen = false;
 
     // Start is called before the first frame update
     void Start()
