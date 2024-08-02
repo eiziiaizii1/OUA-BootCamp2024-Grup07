@@ -13,9 +13,10 @@ public class Portal : MonoBehaviour
 
     public bool PortaldanGecti = false;
 
+
     void Start()
     {
-        
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -41,6 +42,8 @@ public class Portal : MonoBehaviour
             // Bir sonraki sahneye geç
             //SceneManager.LoadScene(currentSceneIndex + 1);
             PortaldanGecti = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             GameManager scoreManager = FindObjectOfType<GameManager>();
             if (scoreManager != null)
             {
