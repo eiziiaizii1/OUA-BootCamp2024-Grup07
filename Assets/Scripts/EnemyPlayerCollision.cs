@@ -13,6 +13,7 @@ public class EnemyPlayerCollision : MonoBehaviour
         {
             Debug.Log("Collision with Enemy detected");
             gameObject.transform.position = respawnPosition.position;
+            return;
         }
     }
 
@@ -22,6 +23,7 @@ public class EnemyPlayerCollision : MonoBehaviour
         {
             Debug.Log("Collision with Enemy detected");
             gameObject.transform.position = respawnPosition.position;
+            return;
         }
     }
 }

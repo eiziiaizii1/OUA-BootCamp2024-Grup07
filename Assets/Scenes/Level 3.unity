@@ -2507,7 +2507,7 @@ Transform:
   m_GameObject: {fileID: 337267165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.71, y: 25.06, z: 2.09}
+  m_LocalPosition: {x: -0.71, y: 24.506, z: 2.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6566,7 +6566,7 @@ Transform:
   m_GameObject: {fileID: 885465087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -13.2, z: 54.2}
+  m_LocalPosition: {x: 0, y: -24.2, z: 54.2}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6591,7 +6591,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 100, y: 1, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &885465093
 MonoBehaviour:
@@ -6870,7 +6870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2423840232755940401, guid: f0d76746e7dbc0d409bbef6e9f27ea51, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4030099077560315466, guid: f0d76746e7dbc0d409bbef6e9f27ea51, type: 3}
       propertyPath: m_LocalPosition.x
