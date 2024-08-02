@@ -232,6 +232,7 @@ Embark on a thrilling interstellar adventure in "Animorph Odyssey"! Abducted by 
     - Beyza added the in-game UI and integrated the Firebase system into each level. The database-related features caused unexpected bugs, so it took longer than expected. She also added tutorial instructions and contributed to adding comic-like cinematics to the beginning of the game; however, we couldn't include this feature in the final version of our game.
     - Simay was able to join our group only in the last week due to issues she had with the academy and our inability to communicate with her. She tried to help as much as she could by taking on tasks related to lighting, level design, and other missing duties.
     - Even though we managed to complete most of the features we aimed for, the incomplete state of the added features hindered our progress, resulting in us including features that fell short of our desired standard.
+    -  - **Sprint Review Participants:** `Aziz Önder`, `Aybaran Yurtseven`, `Beyza Özkan`, `Simay Yılmaz` 
       
 - ### **Sprint Retrospective:**
     - The issues we faced during this sprint were the inability to focus on the project due to personal reasons and not completing the tasks fully.
